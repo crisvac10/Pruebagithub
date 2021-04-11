@@ -1,5 +1,6 @@
 package co.edu.unbosque.view;
 
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.ImageIcon;
@@ -24,16 +25,16 @@ public class VentanaBienvenido extends JFrame {
 		ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 		alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 		setLayout(null);
-		setSize(533, 460);
-		setLocation((int) (ancho / 3.2), (int) (alto / 4.5));
+		setSize(500, 538);
+		setLocation((int) (ancho / 3.2), (int) (alto / 6));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Botones();
 
 		Dimension tam = getSize();
-		ImagenBienvenida = new ImageIcon(getClass().getResource("/Imagen/bienvenida2.jpeg"));
+		ImagenBienvenida = new ImageIcon(getClass().getResource("/Imagen/quatriqui.jpeg"));
 		bienvenida = new JLabel(ImagenBienvenida);
-		bienvenida.setBounds(0, 0, tam.width, tam.height);
+		bienvenida.setBounds(-5, -20, tam.width, tam.height);
 
 		add(bienvenida);
 
@@ -45,13 +46,21 @@ public class VentanaBienvenido extends JFrame {
 
 		bt_Jugar = new JButton("Jugar");
 		bt_Jugar.setActionCommand("JUGAR");
-		bt_Jugar.setBounds(80, 200, 200, 30);
+		bt_Jugar.setBounds(46, 380, 100, 30);
+		bt_Jugar.setBackground(new Color(33,34,29));
+		bt_Jugar.setForeground(new Color(255,255,255));
+		bt_Jugar.setBorderPainted(false);
+		bt_Jugar.setFocusPainted(false);
 		bt_Jugar.setVisible(true);
 		add(bt_Jugar);
 
 		bt_Historial = new JButton("Historial de partidas");
 		bt_Historial.setActionCommand("HISTORIAL");
-		bt_Historial.setBounds(80, 240, 200, 30);
+		bt_Historial.setBackground(new Color(46,46,44));
+		bt_Historial.setForeground(new Color(255,255,255));
+		bt_Historial.setFocusPainted(false);
+		bt_Historial.setBorderPainted(false);
+		bt_Historial.setBounds(146, 230, 200, 30);
 		bt_Historial.setVisible(true);
 		add(bt_Historial);
 		
