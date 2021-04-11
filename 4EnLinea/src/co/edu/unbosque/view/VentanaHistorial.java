@@ -10,7 +10,7 @@ public class VentanaHistorial extends JFrame{
 	private int alto;// Atributo que contiene el alto de la pantalla
 	
 	
-	private JButton bt_menú;
+	private JButton bt_menu;
 	
 	public VentanaHistorial (){
 		
