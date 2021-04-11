@@ -1,19 +1,34 @@
 package co.edu.unbosque.controller;
 
-public class Controller {
- Cv :v ....
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import co.edu.unbosque.view.VentanaBienvenido;
+
+public class Controller implements ActionListener{
+	
+	public VentanaBienvenido ventana_bienvenido;
+	//public Quatriqui nose;
+	
+	
+	public Controller() {
+		ventana_bienvenido = new VentanaBienvenido();
+		// = Quatriqui
+		
+	}
+
+	
+	public void actionPerformed(ActionEvent arg0) {
+		
+		ventana_bienvenido.getBt_Historial().addActionListener(this);
+		
+	}
+	
+	
+	
+	
+
  
- "que hace mi pez"
- bsjdnaskdnaksdnaksndasd
- asdasd
- asdas
- da
- sda
- sda
- sd
- as
- da
- sd
- as
- da
+
+ 
 }
