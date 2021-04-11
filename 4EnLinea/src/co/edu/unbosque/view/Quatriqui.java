@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 
 public class Quatriqui extends JFrame {
 	
+	private PanelRegistro pregistro;
+	
 	private JButton bt_Menú;
 	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
@@ -36,6 +38,10 @@ public class Quatriqui extends JFrame {
 		bt_Menú.setVisible(true);
 		add(bt_Menú);
 		
+		pregistro = new PanelRegistro();
+		pregistro.setBounds(400, 0, 400, 600);
+		pregistro.setVisible(true);
+		getContentPane().add(pregistro);
 		
 	}
 
@@ -45,6 +51,14 @@ public class Quatriqui extends JFrame {
 
 	public void setBt_Menú(JButton bt_Menú) {
 		this.bt_Menú = bt_Menú;
+	}
+
+	public PanelRegistro getPregistro() {
+		return pregistro;
+	}
+
+	public void setPregistro(PanelRegistro pregistro) {
+		this.pregistro = pregistro;
 	}
 	
 	
