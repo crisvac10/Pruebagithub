@@ -14,13 +14,13 @@ public class VentanaHistorial extends JFrame{
 	
 	public VentanaHistorial (){
 		
-		setTitle("Base De Datos");
-		setSize(1560, 550);
+		setTitle("ventana historial");
+		setSize(500, 500);
 		getContentPane().setLayout(null);
 		setIconImage(new ImageIcon(getClass().getResource("/Imagen/logo.png")).getImage());
 		ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 		alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
-		setLocation((int) (ancho / 500), (int) (alto / 6));
+		setLocation((int) (ancho / 3), (int) (alto / 5));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Interfaz();
