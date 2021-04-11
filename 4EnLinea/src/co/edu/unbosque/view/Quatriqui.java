@@ -13,7 +13,6 @@ public class Quatriqui extends JFrame {
 	private PanelRegistro pregistro;
 	
 	private JButton bt_Menu;
-	private JButton nosequemonda;
 	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
 	private int alto;// Atributo que contiene el alto de la pantalla
