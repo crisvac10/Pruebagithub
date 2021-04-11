@@ -9,6 +9,11 @@ import javax.swing.JLabel;
 
 public class Quatriqui extends JFrame {
 	
+
+	private PanelRegistro pregistro;
+	
+	private JButton bt_Menú;
+
 	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
 	private int alto;// Atributo que contiene el alto de la pantalla
@@ -57,12 +62,19 @@ public class Quatriqui extends JFrame {
 	
 	public void InterfazQuatriqui() {
 		
+
 		B1_1 = new JButton("");
 		B1_1.setActionCommand("B1_1");
 		B1_1.setVisible(true);
 		B1_1.setBounds(25, 25, 50, 50);
 		add(B1_1);
-		
+
+		bt_Menú = new JButton("Menú");
+		bt_Menú.setActionCommand("MENÚ");
+		bt_Menú.setBounds(20, 475, 100, 30);
+		bt_Menú.setVisible(true);
+		add(bt_Menú);
+
 		B1_2 = new JButton("");
 		B1_2.setActionCommand("B1_2");
 		B1_2.setVisible(true);
@@ -74,6 +86,12 @@ public class Quatriqui extends JFrame {
 		B1_3.setVisible(true);
 		B1_3.setBounds(245, 25, 50, 50);
 		add(B1_3);
+
+		pregistro = new PanelRegistro();
+		pregistro.setBounds(400, 0, 400, 600);
+		pregistro.setVisible(true);
+		getContentPane().add(pregistro);
+
 		
 		B1_4 = new JButton("");
 		B1_4.setActionCommand("B1_4");
@@ -154,5 +172,23 @@ public class Quatriqui extends JFrame {
 		B4_4.setBounds(355, 325, 50, 50);
 		add(B4_4);
 	}
+
+	public JButton getBt_Menú() {
+		return bt_Menú;
+	}
+
+	public void setBt_Menú(JButton bt_Menú) {
+		this.bt_Menú = bt_Menú;
+	}
+
+	public PanelRegistro getPregistro() {
+		return pregistro;
+	}
+
+	public void setPregistro(PanelRegistro pregistro) {
+		this.pregistro = pregistro;
+	}
+	
+	
 
 }
