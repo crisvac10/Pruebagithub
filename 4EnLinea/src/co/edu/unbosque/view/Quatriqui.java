@@ -187,6 +187,16 @@ public class Quatriqui extends JFrame {
 	public void setPregistro(PanelRegistro pregistro) {
 		this.pregistro = pregistro;
 	}
+
+
+	public JLabel getCuatriqui() {
+		return cuatriqui;
+	}
+
+
+	public void setCuatriqui(JLabel cuatriqui) {
+		this.cuatriqui = cuatriqui;
+	}
 	
 	
 
