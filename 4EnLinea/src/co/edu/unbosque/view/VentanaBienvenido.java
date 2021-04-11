@@ -43,14 +43,14 @@ public class VentanaBienvenido extends JFrame {
 	
 	public void Botones() {
 
-		bt_Jugar = new JButton("Base De Datos Empleados");
-		bt_Jugar.setActionCommand("BASEDEDATOS");
+		bt_Jugar = new JButton("Jugar");
+		bt_Jugar.setActionCommand("JUGAR");
 		bt_Jugar.setBounds(80, 200, 200, 30);
 		bt_Jugar.setVisible(true);
 		add(bt_Jugar);
 
-		bt_Historial = new JButton("Añadir Empleado");
-		bt_Historial.setActionCommand("AÑADIREMPLEADO");
+		bt_Historial = new JButton("Historial de partidas");
+		bt_Historial.setActionCommand("HISTORIAL");
 		bt_Historial.setBounds(80, 240, 200, 30);
 		bt_Historial.setVisible(true);
 		add(bt_Historial);
@@ -74,14 +74,6 @@ public class VentanaBienvenido extends JFrame {
 		this.bt_Historial = bt_Historial;
 	}
 
-	public JButton getBt_salir() {
-		return bt_salir;
-	}
-
-	public void setBt_salir(JButton bt_salir) {
-		this.bt_salir = bt_salir;
-	}
-	
 	
 
 }
