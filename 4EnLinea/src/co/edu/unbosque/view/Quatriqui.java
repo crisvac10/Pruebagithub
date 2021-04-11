@@ -12,7 +12,7 @@ public class Quatriqui extends JFrame {
 
 	private PanelRegistro pregistro;
 	
-	private JButton bt_Menú;
+	private JButton bt_Menu;
 	private JButton nosequemonda;
 	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
@@ -69,11 +69,11 @@ public class Quatriqui extends JFrame {
 		B1_1.setBounds(25, 25, 50, 50);
 		add(B1_1);
 
-		bt_Menú = new JButton("Menú");
-		bt_Menú.setActionCommand("MENÚ");
-		bt_Menú.setBounds(20, 475, 100, 30);
-		bt_Menú.setVisible(true);
-		add(bt_Menú);
+		bt_Menu = new JButton("Menú");
+		bt_Menu.setActionCommand("MENÚ");
+		bt_Menu.setBounds(20, 475, 100, 30);
+		bt_Menu.setVisible(true);
+		add(bt_Menu);
 
 		B1_2 = new JButton("");
 		B1_2.setActionCommand("B1_2");
@@ -173,12 +173,12 @@ public class Quatriqui extends JFrame {
 		add(B4_4);
 	}
 
-	public JButton getBt_Menú() {
-		return bt_Menú;
+	public JButton getBt_Menu() {
+		return bt_Menu;
 	}
 
-	public void setBt_Menú(JButton bt_Menú) {
-		this.bt_Menú = bt_Menú;
+	public void setBt_Menu(JButton bt_Menu) {
+		this.bt_Menu = bt_Menu;
 	}
 
 	public PanelRegistro getPregistro() {

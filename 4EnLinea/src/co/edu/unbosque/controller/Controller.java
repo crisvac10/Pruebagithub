@@ -24,7 +24,7 @@ public class Controller implements ActionListener{
 		ventana_bienvenido.getBt_Historial().addActionListener(this);
 		ventana_bienvenido.getBt_Jugar().addActionListener(this);
 		
-		quatriqui.getBt_Menú().addActionListener(this);
+		quatriqui.getBt_Menu().addActionListener(this);
 		
 	}
 
