@@ -186,129 +186,129 @@ public class PanelCuatriqui extends JPanel{
 		// BOTONESSSSSSSSSSSSSSSS
 		B1 = new JButton();
 		B1.setActionCommand("UNO");
-		B1.setOpaque(false);
+		B1.setOpaque(true);
 		B1.setBounds(2, 2, 80, 80);
-		B1.setBackground(new Color(0,0,0,0));
+		B1.setBackground(new Color(255,255,255,255));
 		B1.setVisible(true);
 		add(B1);
 		
 		B2 = new JButton();
 		B2.setActionCommand("DOS");
-		B2.setOpaque(false);
+		B2.setOpaque(true);
 		B2.setBounds(102, 2, 80, 80);
-		B2.setBackground(new Color(0,0,0,0));
+		B2.setBackground(new Color(255,255,255,255));
 		B2.setVisible(true);
 		add(B2);
 		
 		B3 = new JButton();
 		B3.setActionCommand("TRES");
-		B3.setOpaque(false);
+		B3.setOpaque(true);
 		B3.setBounds(202, 2, 80, 80);
-		B3.setBackground(new Color(0,0,0,0));
+		B3.setBackground(new Color(255,255,255,255));
 		B3.setVisible(true);
 		add(B3);
 		
 		B4 = new JButton();
 		B4.setActionCommand("CUATRO");
-		B4.setOpaque(false);
+		B4.setOpaque(true);
 		B4.setBounds(302, 2, 80, 80);
-		B4.setBackground(new Color(0,0,0,0));
+		B4.setBackground(new Color(255,255,255,255));
 		B4.setVisible(true);
 		add(B4);
 		
 		B5 = new JButton();
 		B5.setActionCommand("CINCO");
-		B5.setOpaque(false);
+		B5.setOpaque(true);
 		B5.setBounds(2, 102, 80, 80);
-		B5.setBackground(new Color(0,0,0,0));
+		B5.setBackground(new Color(255,255,255,255));
 		B5.setVisible(true);
 		add(B5);
 		
 		B6 = new JButton();
 		B6.setActionCommand("SEIS");
-		B6.setOpaque(false);
+		B6.setOpaque(true);
 		B6.setBounds(102, 102, 80, 80);
-		B6.setBackground(new Color(0,0,0,0));
+		B6.setBackground(new Color(255,255,255,255));
 		B6.setVisible(true);
 		add(B6);
 		
 		B7 = new JButton();
 		B7.setActionCommand("SIETE");
-		B7.setOpaque(false);
+		B7.setOpaque(true);
 		B7.setBounds(202, 102, 80, 80);
-		B7.setBackground(new Color(0,0,0,0));
+		B7.setBackground(new Color(255,255,255,255));
 		B7.setVisible(true);
 		add(B7);
 		
 		B8 = new JButton();
 		B8.setActionCommand("OCHO");
-		B8.setOpaque(false);
+		B8.setOpaque(true);
 		B8.setBounds(302, 102, 80, 80);
-		B8.setBackground(new Color(0,0,0,0));
+		B8.setBackground(new Color(255,255,255,255));
 		B8.setVisible(true);
 		add(B8);
 		
 		B9 = new JButton();
 		B9.setActionCommand("NUEVE");
-		B9.setOpaque(false);
+		B9.setOpaque(true);
 		B9.setBounds(2, 202, 80, 80);
-		B9.setBackground(new Color(0,0,0,0));
+		B9.setBackground(new Color(255,255,255,255));
 		B9.setVisible(true);
 		add(B9);
 		
 		B10 = new JButton();
 		B10.setActionCommand("DIEZ");
-		B10.setOpaque(false);
+		B10.setOpaque(true);
 		B10.setBounds(102, 202, 80, 80);
-		B10.setBackground(new Color(0,0,0,0));
+		B10.setBackground(new Color(255,255,255,255));
 		B10.setVisible(true);
 		add(B10);
 		
 		B11 = new JButton();
 		B11.setActionCommand("ONCE");
-		B11.setOpaque(false);
+		B11.setOpaque(true);
 		B11.setBounds(202, 202, 80, 80);
-		B11.setBackground(new Color(0,0,0,0));
+		B11.setBackground(new Color(255,255,255,255));
 		B11.setVisible(true);
 		add(B11);
 		
 		B12 = new JButton();
 		B12.setActionCommand("DOCE");
-		B12.setOpaque(false);
+		B12.setOpaque(true);
 		B12.setBounds(302, 202, 80, 80);
-		B12.setBackground(new Color(0,0,0,0));
+		B12.setBackground(new Color(255,255,255,255));
 		B12.setVisible(true);
 		add(B12);
 		
 		B13 = new JButton();
 		B13.setActionCommand("TRECE");
-		B13.setOpaque(false);
+		B13.setOpaque(true);
 		B13.setBounds(2, 302, 80, 80);
-		B13.setBackground(new Color(0,0,0,0));
+		B13.setBackground(new Color(255,255,255,255));
 		B13.setVisible(true);
 		add(B13);
 		
 		B14 = new JButton();
 		B14.setActionCommand("CATORCE");
-		B14.setOpaque(false);
+		B14.setOpaque(true);
 		B14.setBounds(102, 302, 80, 80);
-		B14.setBackground(new Color(0,0,0,0));
+		B14.setBackground(new Color(255,255,255,255));
 		B14.setVisible(true);
 		add(B14);
 		
 		B15 = new JButton();
 		B15.setActionCommand("QUINCE");
-		B15.setOpaque(false);
+		B15.setOpaque(true);
 		B15.setBounds(202, 302, 80, 80);
-		B15.setBackground(new Color(0,0,0,0));
+		B15.setBackground(new Color(255,255,255,255));
 		B15.setVisible(true);
 		add(B15);
 		
 		B16 = new JButton();
 		B16.setActionCommand("DIECISEIS");
-		B16.setOpaque(false);
+		B16.setOpaque(true);
 		B16.setBounds(302, 302, 80, 80);
-		B16.setBackground(new Color(0,0,0,0));
+		B16.setBackground(new Color(255,255,255,255));
 		B16.setVisible(true);
 		add(B16);
 		
