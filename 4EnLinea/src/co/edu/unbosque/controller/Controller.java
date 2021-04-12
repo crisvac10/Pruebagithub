@@ -144,6 +144,7 @@ public class Controller implements ActionListener{
 				quatriqui.getPanelCuatriqui().getLb16().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB16().setVisible(false);
 				
+				
 			}
 		//conexión con la persistencia	
 		{

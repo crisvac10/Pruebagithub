@@ -75,6 +75,7 @@ public class Quatriqui extends JFrame {
 		
 		
 		
+		
 	}
 
 	public JPanel getCuatriqui() {

@@ -311,6 +311,7 @@ public class PanelCuatriqui extends JPanel{
 		B16.setBackground(new Color(0,0,0,0));
 		B16.setVisible(true);
 		add(B16);
+		
 
 		
 		
