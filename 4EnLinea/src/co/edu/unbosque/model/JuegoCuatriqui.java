@@ -5,7 +5,7 @@ import co.edu.unbosque.view.PanelCuatriqui;
 public class JuegoCuatriqui {
 	public PanelCuatriqui PanelCuatriqui;
 	String turno = "O";
-	
+
 	public JuegoCuatriqui() {
 		PanelCuatriqui = new PanelCuatriqui();
 	}
@@ -14,12 +14,9 @@ public class JuegoCuatriqui {
 
 		if (turno.equals("X")) {
 			turno = "O";
-
 		} else if (turno.equals("O")) {
 			turno = "X";
-
-		}return turno;
- 
+		}
+		return turno;
 	}
-
 }
