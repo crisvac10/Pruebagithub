@@ -168,6 +168,7 @@ public class PanelCuatriqui extends JPanel{
 		lb15.setBounds(202, 302, 80, 80);
 		lb15.setFont(new Font("Tahoma", 1, 80));
 		lb15.setHorizontalAlignment(JLabel.CENTER);
+		lb14.setForeground(Color.black);
 		lb15.setVisible(false);
 		lb15.setOpaque(true);
 		lb15.setBackground(Color.white);

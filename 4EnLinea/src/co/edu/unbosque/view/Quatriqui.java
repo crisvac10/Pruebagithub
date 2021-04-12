@@ -43,7 +43,8 @@ public class Quatriqui extends JFrame {
 		Dimension tam = getSize();
 		ImagenCuatriqui = new ImageIcon(getClass().getResource("/Imagen/cuatriqui1.png"));
 		quatriqui = new JLabel(ImagenCuatriqui);
-		quatriqui.setBounds(-30, -130, tam.width, tam.height);
+		//quatriqui.setBounds(-30, -130, tam.width, tam.height);
+		quatriqui.setBounds(10,10,384,384);
 
 		add(quatriqui);
 		
