@@ -1,5 +1,7 @@
 package co.edu.unbosque.view;
 
+import java.awt.Color;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -37,6 +39,8 @@ public class VentanaHistorial extends JFrame{
 		bt_Regresar.setBounds(50, 400, 100, 30);
 		bt_Regresar.setVisible(true);
 		add(bt_Regresar);
+		
+		this.getContentPane().setBackground(new Color(251,201,40));
 		
 	}
 
