@@ -2,13 +2,17 @@ package co.edu.unbosque.controller;
 	
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JLabel;
 
 import co.edu.unbosque.model.Registro;
 import co.edu.unbosque.view.Quatriqui;
 import co.edu.unbosque.view.VentanaBienvenido;
 import co.edu.unbosque.view.VentanaHistorial;
 
-public class Controller implements ActionListener{
+public class Controller implements ActionListener, MouseListener{
 	
 	public VentanaBienvenido ventana_bienvenido;
 	public Quatriqui quatriqui;
@@ -27,6 +31,7 @@ public class Controller implements ActionListener{
 		ventana_bienvenido.getBt_Historial().addActionListener(this);
 		ventana_bienvenido.getBt_Jugar().addActionListener(this);
 		quatriqui.getBt_Menu().addActionListener(this);
+		quatriqui.getPanelCuatriqui().getLb1().addMouseListener(this);
 		
 	}
 
@@ -57,6 +62,35 @@ public class Controller implements ActionListener{
 			ventana_historial.setVisible(true);
 		}
 		
+		
+	}
+
+	
+	public void mouseClicked(MouseEvent e) {
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	public void mousePressed(MouseEvent e) {
+		
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
 	
