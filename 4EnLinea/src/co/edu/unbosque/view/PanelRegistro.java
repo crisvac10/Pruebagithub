@@ -7,22 +7,26 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-public class PanelRegistro extends JPanel{
-	
+public class PanelRegistro extends JPanel {
+
 	private JTextArea area_texto;
-	
-	public  PanelRegistro() {
-		
+
+	public PanelRegistro() {
+
 		setBorder(new TitledBorder("Registro de jugadas"));
-		setLayout(null);
-		setBackground(Color.WHITE);
-		
+		setLayout(new FlowLayout());
+		setBackground(Color.white);
+
 		funcionar();
+
 	}
-	
-	public void funcionar() {
+
+
+	private void funcionar() {
+
 		area_texto = new JTextArea();
 		area_texto.setBounds(10, 10, 400, 600);
 		JScrollPane panel = new JScrollPane(area_texto);
@@ -38,9 +42,4 @@ public class PanelRegistro extends JPanel{
 		this.area_texto = area_texto;
 	}
 
-	
-
-	
-	
-	
 }
