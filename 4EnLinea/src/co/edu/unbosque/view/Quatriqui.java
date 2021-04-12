@@ -56,8 +56,8 @@ public class Quatriqui extends JFrame {
 	
 	public void InterfazQuatriqui() {
 		
-		bt_Menu = new JButton("Menú");
-		bt_Menu.setActionCommand("MENÚ");
+		bt_Menu = new JButton("Menu");
+		bt_Menu.setActionCommand("MENU");
 		bt_Menu.setBounds(20, 475, 100, 30);
 		bt_Menu.setVisible(true);
 		add(bt_Menu);
