@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 
 import co.edu.unbosque.model.Registro;
 import co.edu.unbosque.view.PanelCuatriqui;
+import co.edu.unbosque.view.PanelRegistro;
 import co.edu.unbosque.view.Quatriqui;
 import co.edu.unbosque.view.VentanaBienvenido;
 import co.edu.unbosque.view.VentanaHistorial;
@@ -22,6 +23,10 @@ public class Controller implements ActionListener {
 	public VentanaHistorial ventana_historial;
 	public Registro registro;
 	public JuegoCuatriqui JuegoCuatriqui;
+	
+	public String jugador1;	
+	public String jugador2; 
+	public String turno;
 
 	public Controller() {
 		ventana_bienvenido = new VentanaBienvenido();
@@ -30,10 +35,27 @@ public class Controller implements ActionListener {
 		registro = new Registro();
 		JuegoCuatriqui = new JuegoCuatriqui();
 		
+		jugador1 = quatriqui.getJugador1();	
+		jugador2 = quatriqui.getJugador2();
+		turno = jugador2;
 		asignarOyentes();
 		
 	}
 
+	public String jugadores() {
+		
+		if (turno.equals(jugador2)) {
+			
+			turno = jugador1;
+			
+		} else if (turno.equals(jugador1)) {
+			
+			turno = jugador2;
+		}
+		return turno;
+	}
+	
+	
 	public void comprobar() {
 
 		if(quatriqui.getPanelCuatriqui().getLb1().getText()== "X"
@@ -213,103 +235,142 @@ public class Controller implements ActionListener {
 			
 			
 				
-		}if((e.getActionCommand().equals("UNO"))){
-			String texto = registro.leerRegistro();
-				
+		}
+		
+		String texto = registro.leerRegistro();
+		texto = quatriqui.getPregistro().getArea_texto().getText();
+		
+		
+		if((e.getActionCommand().equals("UNO"))){
+			
+			
 				quatriqui.getPanelCuatriqui().getLb1().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb1().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB1().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores() +" su jugada fue Lb1  "+ texto);
+				jugadores();
 				comprobar();
 				
 				
 			}if((e.getActionCommand().equals("DOS"))) {
+				
 				quatriqui.getPanelCuatriqui().getLb2().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb2().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB2().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores() +" su jugada fue Lb2  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("TRES"))) {
 				quatriqui.getPanelCuatriqui().getLb3().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb3().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB3().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb3  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("CUATRO"))) {
 				quatriqui.getPanelCuatriqui().getLb4().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb4().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB4().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb4  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("CINCO"))) {
 				quatriqui.getPanelCuatriqui().getLb5().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb5().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB5().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb5  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("SEIS"))) {
 				quatriqui.getPanelCuatriqui().getLb6().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb6().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB6().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb6  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("SIETE"))) {
 				quatriqui.getPanelCuatriqui().getLb7().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb7().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB7().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb7  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("OCHO"))) {
 				quatriqui.getPanelCuatriqui().getLb8().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb8().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB8().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb8  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("NUEVE"))) {
 				quatriqui.getPanelCuatriqui().getLb9().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb9().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB9().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb9  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("DIEZ"))) {
 				quatriqui.getPanelCuatriqui().getLb10().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb10().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB10().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb10  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("ONCE"))) {
 				quatriqui.getPanelCuatriqui().getLb11().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb11().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB11().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb11  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("DOCE"))){
 				quatriqui.getPanelCuatriqui().getLb12().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb12().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB12().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb12  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("TRECE"))) {
 				quatriqui.getPanelCuatriqui().getLb13().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb13().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB13().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb13  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("CATORCE"))) {
 				quatriqui.getPanelCuatriqui().getLb14().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb14().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB14().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb14 "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("QUINCE"))) {
 				quatriqui.getPanelCuatriqui().getLb15().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb15().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB15().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb15  "+texto);
+				jugadores();
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("DIECISEIS"))) {
 				quatriqui.getPanelCuatriqui().getLb16().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb16().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB16().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb16  "+texto);
+				jugadores();
 				comprobar();
 				
 			}
