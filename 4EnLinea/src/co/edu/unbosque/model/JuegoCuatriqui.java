@@ -19,7 +19,7 @@ public class JuegoCuatriqui {
 			turno = "X";
 
 		}return turno;
-
+ 
 	}
 
 }
