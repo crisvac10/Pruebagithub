@@ -32,6 +32,7 @@ public class Controller implements ActionListener{
 		ventana_bienvenido.getBt_Historial().addActionListener(this);
 		ventana_bienvenido.getBt_Jugar().addActionListener(this);
 		quatriqui.getBt_Menu().addActionListener(this);
+		ventana_historial.getBt_Regresar().addActionListener(this);
 		quatriqui.getPanelCuatriqui().getB1().addActionListener(this);
 		quatriqui.getPanelCuatriqui().getB2().addActionListener(this);
 		quatriqui.getPanelCuatriqui().getB3().addActionListener(this);
@@ -146,12 +147,12 @@ public class Controller implements ActionListener{
 				
 				
 			}
-		//conexión con la persistencia	
+		//conexiï¿½n con la persistencia	
 		{
 		
 			
 		//VENTANA BIENVENIDA		
-		}if((e.getActionCommand().equals("MENÚ"))) {
+		}if((e.getActionCommand().equals("MENU"))) {
 			ventana_bienvenido.setVisible(true);
 			quatriqui.setVisible(false);
 			ventana_historial.setVisible(false);
