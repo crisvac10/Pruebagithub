@@ -31,20 +31,21 @@ public class Controller implements ActionListener {
 		registro = new Registro();
 		JuegoCuatriqui = new JuegoCuatriqui();
 		PanelCuatriqui = new PanelCuatriqui();
+		
 		asignarOyentes();
 		
 	}
 
 	public void comprobar() {
 		
-		if(PanelCuatriqui.getLb1().getText()== "X"
-		& PanelCuatriqui.getLb2().getText()== "X"
-		& PanelCuatriqui.getLb3().getText()== "X"
-		& PanelCuatriqui.getLb4().getText()== "X"
+		if(PanelCuatriqui.getLb1().getText().toString()== "X"
+		& PanelCuatriqui.getLb2().getText().toString()== "X"
+		& PanelCuatriqui.getLb3().getText().toString()== "X"
+		& PanelCuatriqui.getLb4().getText().toString()== "X"
 		) {
-			System.out.println("X ganó "+PanelCuatriqui.getLb1().getText());
+			System.out.println("X ganó "+PanelCuatriqui.getLb1().getText().toString());
 		}else {
-			System.out.println("X no ganó "+PanelCuatriqui.getLb1().getText());
+			System.out.println("X no ganó "+PanelCuatriqui.getLb1().getText().toString());
 		}
 	}
 	
@@ -80,15 +81,16 @@ public class Controller implements ActionListener {
 			ventana_bienvenido.setVisible(false);
 			quatriqui.setVisible(true);
 			
-			String texto = registro.leerRegistro();
-			quatriqui.getPregistro().getArea_texto().setText(texto);
+			
 			
 				
 		}if((e.getActionCommand().equals("UNO"))){
-			
+			String texto = registro.leerRegistro();
+				
 				quatriqui.getPanelCuatriqui().getLb1().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb1().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB1().setVisible(false);
+				quatriqui.getPregistro().getArea_texto().setText("Lb1 = "+JuegoCuatriqui.turnos());
 				comprobar();
 				
 				

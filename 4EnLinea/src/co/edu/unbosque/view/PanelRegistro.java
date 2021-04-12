@@ -30,7 +30,7 @@ public class PanelRegistro extends JPanel {
 		area_texto = new JTextArea();
 		area_texto.setBounds(10, 10, 400, 600);
 		JScrollPane panel = new JScrollPane(area_texto);
-		panel.setBounds(2, 20, 400, 600);
+		panel.setBounds(2, 80, 400, 600);
 		add(panel);
 	}
 

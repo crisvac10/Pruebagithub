@@ -4,7 +4,7 @@ import co.edu.unbosque.view.PanelCuatriqui;
 
 public class JuegoCuatriqui {
 	public PanelCuatriqui PanelCuatriqui;
-	String turno = "O";
+	String turno = "X";
 
 	public JuegoCuatriqui() {
 		PanelCuatriqui = new PanelCuatriqui();
