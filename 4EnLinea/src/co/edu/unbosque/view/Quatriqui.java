@@ -13,7 +13,8 @@ import javax.swing.border.TitledBorder;
 
 public class Quatriqui extends JFrame {
 	
-
+	private ImageIcon ImagenCuatriqui;// imagen de fondo de la ventana Bienvenido
+	private JLabel quatriqui; // Atributo Jlabel que contiene la imagen de fondo
 	private PanelRegistro pregistro;
 	private PanelCuatriqui PanelCuatriqui;
 	
@@ -38,7 +39,15 @@ public class Quatriqui extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		InterfazQuatriqui();
+		
+		Dimension tam = getSize();
+		ImagenCuatriqui = new ImageIcon(getClass().getResource("/Imagen/cuatriqui1.png"));
+		quatriqui = new JLabel(ImagenCuatriqui);
+		quatriqui.setBounds(-30, -130, tam.width, tam.height);
 
+		add(quatriqui);
+		
+		
 		setResizable(false);
 		setVisible(false);
 	}
@@ -60,6 +69,7 @@ public class Quatriqui extends JFrame {
 		
 		PanelCuatriqui = new PanelCuatriqui();
 		PanelCuatriqui.setBounds(10, 10, 384, 384);
+		PanelCuatriqui.setOpaque(false);
 		PanelCuatriqui.setVisible(true);
 		getContentPane().add(PanelCuatriqui);
 		
