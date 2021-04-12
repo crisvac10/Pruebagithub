@@ -10,7 +10,7 @@ public class VentanaHistorial extends JFrame{
 	private int alto;// Atributo que contiene el alto de la pantalla
 	
 	
-	private JButton bt_menu;
+	private JButton bt_Regresar;
 	
 	public VentanaHistorial (){
 		
@@ -32,7 +32,20 @@ public class VentanaHistorial extends JFrame{
 	}
 	
 	public void Interfaz() {
+		bt_Regresar = new JButton("Regresar");
+		bt_Regresar.setActionCommand("MENU");
+		bt_Regresar.setBounds(50, 400, 100, 30);
+		bt_Regresar.setVisible(true);
+		add(bt_Regresar);
 		
+	}
+
+	public JButton getBt_Regresar() {
+		return bt_Regresar;
+	}
+
+	public void setBt_Regresar(JButton bt_Regresar) {
+		this.bt_Regresar = bt_Regresar;
 	}
 
 }

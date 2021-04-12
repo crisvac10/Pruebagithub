@@ -13,7 +13,7 @@ public class VentanaBienvenido extends JFrame {
 	private ImageIcon ImagenBienvenida;// imagen de fondo de la ventana Bienvenido
 	private JLabel bienvenida; // Atributo Jlabel que contiene la imagen de fondo
 	private JButton bt_Jugar; // Boton para entrar a la ventana base de datos
-	private JButton bt_Historial;// Boton para entrar a la ventana añadir Empleado
+	private JButton bt_Historial;// Boton para entrar a la ventana aï¿½adir Empleado
 	private JButton bt_salir; // Boton para salir del programa
 	private int ancho; // Atributo que contiene el ancho de la pantalla
 	private int alto;// Atributo que contiene el alto de la pantalla
@@ -21,7 +21,7 @@ public class VentanaBienvenido extends JFrame {
 	public VentanaBienvenido() {
 
 		setIconImage(new ImageIcon(getClass().getResource("/Imagen/logo.png")).getImage());
-		setTitle("BosqueSW");
+		setTitle("Cuatriqui");
 		ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 		alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 		setLayout(null);
