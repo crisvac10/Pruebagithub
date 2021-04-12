@@ -74,7 +74,7 @@ public class Quatriqui extends JFrame {
 		PanelCuatriqui.setVisible(true);
 		getContentPane().add(PanelCuatriqui);
 		
-		
+		this.getContentPane().setBackground(new Color(251,201,40));
 		
 		
 	}
