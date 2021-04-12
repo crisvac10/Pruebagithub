@@ -17,7 +17,7 @@ public class PanelRegistro extends JPanel {
 	public PanelRegistro() {
 
 		setBorder(new TitledBorder("Registro de jugadas"));
-		setLayout(new FlowLayout());
+		setLayout(null);
 		setBackground(Color.white);
 
 		funcionar();
