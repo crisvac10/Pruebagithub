@@ -148,7 +148,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb16().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb16().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB16().setVisible(false);
-								
+				 				
 			}
 		//conexi�n con la persistencia	
 		{
