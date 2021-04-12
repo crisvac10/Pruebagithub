@@ -37,20 +37,18 @@ public class Controller implements ActionListener {
 		
 		jugador1 = quatriqui.getJugador1();	
 		jugador2 = quatriqui.getJugador2();
-		turno = jugador2;
+		turno = jugador1;
 		asignarOyentes();
 		
 	}
 
 	public String jugadores() {
 		
-		if (turno.equals(jugador2)) {
-			
-			turno = jugador1;
-			
-		} else if (turno.equals(jugador1)) {
-			
+		if (turno.equals(jugador1)) {	
 			turno = jugador2;
+			
+		} else if (turno.equals(jugador2)) {
+			turno = jugador1;
 		}
 		return turno;
 	}
@@ -247,6 +245,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb1().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb1().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB1().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores() +" su jugada fue Lb1  "+ texto);
 				jugadores();
 				comprobar();
@@ -257,6 +256,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb2().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb2().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB2().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores() +" su jugada fue Lb2  "+texto);
 				jugadores();
 				comprobar();
@@ -265,6 +265,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb3().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb3().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB3().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb3  "+texto);
 				jugadores();
 				comprobar();
@@ -273,6 +274,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb4().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb4().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB4().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb4  "+texto);
 				jugadores();
 				comprobar();
@@ -281,6 +283,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb5().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb5().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB5().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb5  "+texto);
 				jugadores();
 				comprobar();
@@ -289,6 +292,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb6().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb6().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB6().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb6  "+texto);
 				jugadores();
 				comprobar();
@@ -297,6 +301,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb7().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb7().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB7().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb7  "+texto);
 				jugadores();
 				comprobar();
@@ -305,6 +310,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb8().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb8().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB8().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb8  "+texto);
 				jugadores();
 				comprobar();
@@ -313,6 +319,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb9().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb9().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB9().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb9  "+texto);
 				jugadores();
 				comprobar();
@@ -321,6 +328,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb10().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb10().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB10().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb10  "+texto);
 				jugadores();
 				comprobar();
@@ -329,6 +337,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb11().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb11().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB11().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb11  "+texto);
 				jugadores();
 				comprobar();
@@ -337,6 +346,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb12().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb12().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB12().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb12  "+texto);
 				jugadores();
 				comprobar();
@@ -345,6 +355,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb13().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb13().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB13().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb13  "+texto);
 				jugadores();
 				comprobar();
@@ -353,6 +364,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb14().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb14().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB14().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb14 "+texto);
 				jugadores();
 				comprobar();
@@ -361,6 +373,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb15().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb15().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB15().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb15  "+texto);
 				jugadores();
 				comprobar();
@@ -369,6 +382,7 @@ public class Controller implements ActionListener {
 				quatriqui.getPanelCuatriqui().getLb16().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb16().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB16().setVisible(false);
+				jugadores();
 				quatriqui.getPregistro().getArea_texto().setText("\n"+jugadores().toString() +" su jugada fue Lb16  "+texto);
 				jugadores();
 				comprobar();
