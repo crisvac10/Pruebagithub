@@ -64,7 +64,7 @@ public class PanelCuatriqui extends JPanel{
 		lb4.setBackground(Color.white);
 		add(lb4);
 		
-		lb5 = new JLabel();
+		lb5 = new JLabel("");
 		lb5.setBounds(2, 102, 80, 80);
 		lb5.setFont(new Font("Tahoma", 1, 80));
 		lb5.setHorizontalAlignment(JLabel.CENTER);
@@ -74,7 +74,7 @@ public class PanelCuatriqui extends JPanel{
 		lb5.setBackground(Color.white);
 		add(lb5);
 		
-		lb6 = new JLabel();
+		lb6 = new JLabel("");
 		lb6.setBounds(102, 102, 80, 80);
 		lb6.setFont(new Font("Tahoma", 1, 80));
 		lb6.setHorizontalAlignment(JLabel.CENTER);
@@ -84,7 +84,7 @@ public class PanelCuatriqui extends JPanel{
 		lb6.setBackground(Color.white);
 		add(lb6);
 		
-		lb7 = new JLabel();
+		lb7 = new JLabel("");
 		lb7.setBounds(202, 102, 80, 80);
 		lb7.setFont(new Font("Tahoma", 1, 80));
 		lb7.setHorizontalAlignment(JLabel.CENTER);
@@ -94,7 +94,7 @@ public class PanelCuatriqui extends JPanel{
 		lb7.setBackground(Color.white);
 		add(lb7);
 		
-		lb8 = new JLabel();
+		lb8 = new JLabel("");
 		lb8.setBounds(302, 102, 80, 80);
 		lb8.setFont(new Font("Tahoma", 1, 80));
 		lb8.setHorizontalAlignment(JLabel.CENTER);
@@ -104,7 +104,7 @@ public class PanelCuatriqui extends JPanel{
 		lb8.setBackground(Color.white);
 		add(lb8);
 		
-		lb9 = new JLabel();
+		lb9 = new JLabel("");
 		lb9.setBounds(2, 202, 80, 80);
 		lb9.setFont(new Font("Tahoma", 1, 80));
 		lb9.setHorizontalAlignment(JLabel.CENTER);
@@ -114,7 +114,7 @@ public class PanelCuatriqui extends JPanel{
 		lb9.setBackground(Color.white);
 		add(lb9);
 		
-		lb10 = new JLabel();
+		lb10 = new JLabel("");
 		lb10.setBounds(102, 202, 80, 80);
 		lb10.setFont(new Font("Tahoma", 1, 80));
 		lb10.setHorizontalAlignment(JLabel.CENTER);
@@ -124,7 +124,7 @@ public class PanelCuatriqui extends JPanel{
 		lb10.setBackground(Color.white);
 		add(lb10);
 		
-		lb11 = new JLabel();
+		lb11 = new JLabel("");
 		lb11.setBounds(202, 202, 80, 80);
 		lb11.setFont(new Font("Tahoma", 1, 80));
 		lb11.setHorizontalAlignment(JLabel.CENTER);
@@ -134,7 +134,7 @@ public class PanelCuatriqui extends JPanel{
 		lb11.setBackground(Color.white);
 		add(lb11);
 		
-		lb12 = new JLabel();
+		lb12 = new JLabel("");
 		lb12.setBounds(302, 202, 80, 80);
 		lb12.setFont(new Font("Tahoma", 1, 80));
 		lb12.setHorizontalAlignment(JLabel.CENTER);
@@ -144,7 +144,7 @@ public class PanelCuatriqui extends JPanel{
 		lb12.setBackground(Color.white);
 		add(lb12);
 		
-		lb13 = new JLabel();
+		lb13 = new JLabel("");
 		lb13.setBounds(2, 302, 80, 80);
 		lb13.setFont(new Font("Tahoma", 1, 80));
 		lb13.setHorizontalAlignment(JLabel.CENTER);
@@ -154,7 +154,7 @@ public class PanelCuatriqui extends JPanel{
 		lb13.setBackground(Color.white);
 		add(lb13);
 		
-		lb14 = new JLabel();
+		lb14 = new JLabel("");
 		lb14.setBounds(102, 302, 80, 80);
 		lb14.setFont(new Font("Tahoma", 1, 80));
 		lb14.setHorizontalAlignment(JLabel.CENTER);
@@ -164,7 +164,7 @@ public class PanelCuatriqui extends JPanel{
 		lb14.setBackground(Color.white);
 		add(lb14);
 		
-		lb15 = new JLabel();
+		lb15 = new JLabel("");
 		lb15.setBounds(202, 302, 80, 80);
 		lb15.setFont(new Font("Tahoma", 1, 80));
 		lb15.setHorizontalAlignment(JLabel.CENTER);
@@ -174,7 +174,7 @@ public class PanelCuatriqui extends JPanel{
 		lb15.setBackground(Color.white);
 		add(lb15);
 		
-		lb16 = new JLabel();
+		lb16 = new JLabel("");
 		lb16.setBounds(302, 302, 80, 80);
 		lb16.setFont(new Font("Tahoma", 1, 80));
 		lb16.setHorizontalAlignment(JLabel.CENTER);

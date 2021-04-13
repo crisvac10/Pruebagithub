@@ -8,6 +8,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 
@@ -20,6 +21,9 @@ public class Quatriqui extends JFrame {
 	
 	private JButton bt_Menu;
 	private JPanel cuatriqui;
+	
+	private String Jugador1;
+	private String Jugador2;
 
 	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
@@ -76,6 +80,9 @@ public class Quatriqui extends JFrame {
 		
 		this.getContentPane().setBackground(new Color(251,201,40));
 		
+		Jugador1 = JOptionPane.showInputDialog("Nombre Jugador 1: ");
+		Jugador2 = JOptionPane.showInputDialog("Nombre Jugador 2: ");
+		
 		
 	}
 
@@ -113,6 +120,26 @@ public class Quatriqui extends JFrame {
 
 	public void setPanelCuatriqui(PanelCuatriqui panelCuatriqui) {
 		PanelCuatriqui = panelCuatriqui;
+	}
+
+
+	public String getJugador1() {
+		return Jugador1;
+	}
+
+
+	public void setJugador1(String jugador1) {
+		Jugador1 = jugador1;
+	}
+
+
+	public String getJugador2() {
+		return Jugador2;
+	}
+
+
+	public void setJugador2(String jugador2) {
+		Jugador2 = jugador2;
 	}
 	
 	
