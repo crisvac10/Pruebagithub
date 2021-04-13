@@ -13,6 +13,9 @@ import javax.swing.border.TitledBorder;
 public class PanelRegistro extends JPanel {
 
 	private JTextArea area_texto;
+	private JLabel Nombre1;
+	private JLabel Nombre2;
+	
 
 	public PanelRegistro() {
 
@@ -32,6 +35,21 @@ public class PanelRegistro extends JPanel {
 		JScrollPane panel = new JScrollPane(area_texto);
 		panel.setBounds(2, 20, 400, 600);
 		add(panel);
+		
+		Nombre1 = new JLabel();
+		Nombre1.setBounds(10, 10, 100, 50);
+		Nombre1.setVisible(false);
+		Nombre1.setOpaque(true);
+		Nombre1.setBackground(Color.white);
+		add(Nombre1);
+		
+		Nombre2 = new JLabel();
+		Nombre2.setBounds(10, 10, 100, 50);
+		Nombre2.setVisible(false);
+		Nombre2.setOpaque(true);
+		Nombre2.setBackground(Color.white);
+		add(Nombre2);
+		
 	}
 
 	public JTextArea getArea_texto() {

@@ -8,6 +8,7 @@ import java.util.Set;
 
 import javax.swing.JLabel;
 
+import co.edu.unbosque.model.JuegoCuatriqui;
 import co.edu.unbosque.model.Registro;
 import co.edu.unbosque.view.PanelCuatriqui;
 import co.edu.unbosque.view.Quatriqui;
@@ -20,12 +21,15 @@ public class Controller implements ActionListener, MouseListener {
 	public Quatriqui quatriqui;
 	public VentanaHistorial ventana_historial;
 	public Registro registro;
+	public JuegoCuatriqui juego;
 
 	public Controller() {
 		ventana_bienvenido = new VentanaBienvenido();
 		ventana_historial = new VentanaHistorial();
 		quatriqui = new Quatriqui();
 		registro = new Registro();
+		juego = new JuegoCuatriqui();
+		
 		asignarOyentes();
 	}
 
@@ -70,13 +74,13 @@ public class Controller implements ActionListener, MouseListener {
 
 			
 		}if((e.getActionCommand().equals("UNO"))){
-				quatriqui.getPanelCuatriqui().getLb1().setText("X");
+				quatriqui.getPanelCuatriqui().getLb1().setText(juego.Turnos());
 				quatriqui.getPanelCuatriqui().getLb1().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB1().setVisible(false);
 				
 				
 			}if((e.getActionCommand().equals("DOS"))) {
-				quatriqui.getPanelCuatriqui().getLb2().setText("X");
+				quatriqui.getPanelCuatriqui().getLb2().setText(juego.Turnos());
 				quatriqui.getPanelCuatriqui().getLb2().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB2().setVisible(false);
 				
