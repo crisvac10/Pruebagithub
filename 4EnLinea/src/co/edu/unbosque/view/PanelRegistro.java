@@ -2,6 +2,7 @@ package co.edu.unbosque.view;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.List;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -21,7 +22,9 @@ public class PanelRegistro extends JPanel {
 	private JLabel puntajeJ1;
 	private JLabel puntajeJ2;
 	private JLabel empates;
-	
+	private List lPuntajeJ1;
+	private List lPuntajeJ2;
+	private List lEmpate;
 	private JButton btrematch;
 	
 
@@ -53,6 +56,9 @@ public class PanelRegistro extends JPanel {
 		puntajeJ1 = new JLabel("Puntaje: ");
 		puntajeJ1.setBounds(10,260,200,25);
 		add(puntajeJ1);
+		lPuntajeJ1= new List(); 
+		lPuntajeJ1.setBounds(10,290,60, 20);
+		add(lPuntajeJ1);
 		
 		nombjugador2 = new JLabel("Jugador 2:");
 		nombjugador2.setBounds(200,220,200,25);
@@ -63,10 +69,16 @@ public class PanelRegistro extends JPanel {
 		puntajeJ2 = new JLabel("Puntaje: ");
 		puntajeJ2.setBounds(200,260,200,25);
 		add(puntajeJ2);
+		lPuntajeJ2= new List(); 
+		lPuntajeJ2.setBounds(200,290,60, 20);
+		add(lPuntajeJ2);
 		
 		empates = new JLabel("Empates: ");
 		empates.setBounds(100,300,200,25);
 		add(empates);
+		lEmpate= new List(); 
+		lEmpate.setBounds(100,330,60, 20);
+		add(lEmpate);
 		
 		btrematch = new JButton("Rematch");
 		btrematch.setActionCommand("REMATCH");
