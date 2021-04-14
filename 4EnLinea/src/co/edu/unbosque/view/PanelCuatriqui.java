@@ -24,6 +24,8 @@ public class PanelCuatriqui extends JPanel{
 	}
 	public void funcionar() {
 		
+		
+		
 		lb1 = new JLabel("");
 		lb1.setBounds(2, 2, 80, 80);
 		lb1.setFont(new Font("Tahoma", 1, 80));

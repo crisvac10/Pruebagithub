@@ -250,7 +250,7 @@ public class Controller implements ActionListener, MouseListener {
 
 			String texto = registro.leerRegistro();
 			quatriqui.getPregistro().getArea_texto().setText(texto);
-
+            
 
 	
 		}

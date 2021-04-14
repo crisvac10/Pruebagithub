@@ -3,6 +3,7 @@ package co.edu.unbosque.view;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -24,7 +25,7 @@ public class Quatriqui extends JFrame {
 	
 	private String Jugador1;
 	private String Jugador2;
-
+	private JLabel Cronometro;
 	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
 	private int alto;// Atributo que contiene el alto de la pantalla
@@ -57,8 +58,18 @@ public class Quatriqui extends JFrame {
 		setVisible(false);
 	}
 	
+
 	
 	public void InterfazQuatriqui() {
+		
+		Cronometro = new JLabel("");
+		Cronometro.setBounds(150, 475, 100, 30);
+		Cronometro.setFont(new Font("Tahoma", 1, 30));
+		Cronometro.setHorizontalAlignment(JLabel.CENTER);
+		Cronometro.setForeground(Color.black);
+		Cronometro.setVisible(true);
+		Cronometro.setBackground(Color.white);
+		add(Cronometro);
 		
 		bt_Menu = new JButton("Menu");
 		bt_Menu.setActionCommand("MENU");
@@ -140,6 +151,14 @@ public class Quatriqui extends JFrame {
 
 	public void setJugador2(String jugador2) {
 		Jugador2 = jugador2;
+	}
+
+	public JLabel getCronometro() {
+		return Cronometro;
+	}
+
+	public void setCronometro(JLabel cronometro) {
+		Cronometro = cronometro;
 	}
 	
 	
