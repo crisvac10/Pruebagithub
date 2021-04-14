@@ -84,4 +84,15 @@ public class PanelRegistro extends JPanel {
 		this.area_texto = area_texto;
 	}
 
+
+	public JButton getBtrematch() {
+		return btrematch;
+	}
+
+
+	public void setBtrematch(JButton btrematch) {
+		this.btrematch = btrematch;
+	}
+
+	
 }
