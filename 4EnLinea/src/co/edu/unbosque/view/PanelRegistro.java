@@ -28,7 +28,6 @@ public class PanelRegistro extends JPanel {
 		setLayout(null);
 		setBackground(Color.white);
 
-
 		funcionar(j1, j2);
 
 	}
@@ -61,6 +60,10 @@ public class PanelRegistro extends JPanel {
 		puntajeJ2 = new JLabel("Puntaje: ");
 		puntajeJ2.setBounds(200,260,200,25);
 		add(puntajeJ2);
+		
+		empates = new JLabel("Empates: ");
+		empates.setBounds(100,300,200,25);
+		add(empates);
 	}
 
 	
