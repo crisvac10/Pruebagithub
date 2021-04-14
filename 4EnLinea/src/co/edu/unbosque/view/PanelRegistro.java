@@ -48,7 +48,7 @@ public class PanelRegistro extends JPanel {
 		nombjugador2 = new JLabel("Jugador 2:");
 		nombjugador2.setBounds(200,220,200,25);
 		add(nombjugador2);
-		nombjugador2 = new JLabel(":DDDDDDDDDDDDDDDdd");
+		nombjugador2 = new JLabel(":DDDDDDDDDDDDDDDDD");
 		nombjugador2.setBounds(200,250,200,25);
 		add(nombjugador2);
 	}
