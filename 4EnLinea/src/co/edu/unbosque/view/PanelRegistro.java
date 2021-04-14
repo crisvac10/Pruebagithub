@@ -18,19 +18,19 @@ public class PanelRegistro extends JPanel {
 	private JLabel lbjugador2;
 	private JLabel nombjugador2;
 
-	public PanelRegistro() {
+	public PanelRegistro(String j1, String j2) {
 
 		setBorder(new TitledBorder("Registro de jugadas"));
 		setLayout(null);
 		setBackground(Color.white);
 
 
-		funcionar();
+		funcionar(j1, j2);
 
 	}
 
 
-	private void funcionar() {
+	private void funcionar(String j1, String j2) {
 
 		area_texto = new JTextArea();
 		area_texto.setBounds(10, 10, 400, 600);
@@ -41,15 +41,15 @@ public class PanelRegistro extends JPanel {
 		lbjugador1 = new JLabel("Jugador 1:");
 		lbjugador1.setBounds(10,220,200,25);
 		add(lbjugador1);
-		nombjugador1 = new JLabel(":DDDDDDDDDDDDDDDDD");
-		nombjugador1.setBounds(10,250,200,25);
+		nombjugador1 = new JLabel(j1);
+		nombjugador1.setBounds(10,240,200,25);
 		add(nombjugador1);
 		
 		nombjugador2 = new JLabel("Jugador 2:");
 		nombjugador2.setBounds(200,220,200,25);
 		add(nombjugador2);
-		nombjugador2 = new JLabel(":DDDDDDDDDDDDDDDDD");
-		nombjugador2.setBounds(200,250,200,25);
+		nombjugador2 = new JLabel(j2);
+		nombjugador2.setBounds(200,240,200,25);
 		add(nombjugador2);
 	}
 
