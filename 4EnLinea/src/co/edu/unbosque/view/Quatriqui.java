@@ -76,8 +76,11 @@ public class Quatriqui extends JFrame {
 		bt_Menu.setBounds(20, 475, 100, 30);
 		bt_Menu.setVisible(true);
 		add(bt_Menu);
-
-		pregistro = new PanelRegistro();
+		
+		Jugador1 = JOptionPane.showInputDialog("Nombre Jugador 1: ");
+		Jugador2 = JOptionPane.showInputDialog("Nombre Jugador 2: ");
+		
+		pregistro = new PanelRegistro(Jugador1, Jugador2);
 		pregistro.setBorder(new TitledBorder("Registro de jugadas"));
 		pregistro.setBounds(420, 0, 400, 600);
 		pregistro.setVisible(true);
@@ -90,11 +93,6 @@ public class Quatriqui extends JFrame {
 		getContentPane().add(PanelCuatriqui);
 		
 		this.getContentPane().setBackground(new Color(251,201,40));
-		
-		Jugador1 = JOptionPane.showInputDialog("Nombre Jugador 1: ");
-		Jugador2 = JOptionPane.showInputDialog("Nombre Jugador 2: ");
-		
-		
 	}
 
 	public JPanel getCuatriqui() {

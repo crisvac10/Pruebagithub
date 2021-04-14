@@ -5,8 +5,6 @@ import java.awt.Color;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.Set;
 
 import javax.swing.JLabel;
@@ -21,10 +19,7 @@ import co.edu.unbosque.view.VentanaBienvenido;
 import co.edu.unbosque.view.VentanaHistorial;
 import co.edu.unbosque.model.JuegoCuatriqui;
 
-public class Controller implements ActionListener, MouseListener {
-	private PanelCuatriqui panelcua;
-
-
+public class Controller implements ActionListener {
 
 
 	public VentanaBienvenido ventana_bienvenido;
@@ -32,9 +27,7 @@ public class Controller implements ActionListener, MouseListener {
 	public VentanaHistorial ventana_historial;
 	public Registro registro;
 
-	public JuegoCuatriqui juego;
-
-	public JuegoCuatriqui JuegoCuatriqui;
+	public JuegoCuatriqui juego_cuatriqui;
 	
 	public String jugador1;	
 	public String jugador2; 
@@ -45,9 +38,8 @@ public class Controller implements ActionListener, MouseListener {
 		ventana_historial = new VentanaHistorial();
 		quatriqui = new Quatriqui();
 		registro = new Registro();
-		juego = new JuegoCuatriqui();
 		
-		JuegoCuatriqui = new JuegoCuatriqui();
+		juego_cuatriqui= new JuegoCuatriqui();
 		
 		jugador1 = quatriqui.getJugador1();	
 		jugador2 = quatriqui.getJugador2();
@@ -216,7 +208,6 @@ public class Controller implements ActionListener, MouseListener {
 		ventana_bienvenido.getBt_Historial().addActionListener(this);
 		ventana_bienvenido.getBt_Jugar().addActionListener(this);
 		quatriqui.getBt_Menu().addActionListener(this);
-		quatriqui.getPanelCuatriqui().getLb1().addMouseListener(this);
 
 
 		ventana_historial.getBt_Regresar().addActionListener(this);
@@ -236,7 +227,7 @@ public class Controller implements ActionListener, MouseListener {
 		quatriqui.getPanelCuatriqui().getB14().addActionListener(this);
 		quatriqui.getPanelCuatriqui().getB15().addActionListener(this);
 		quatriqui.getPanelCuatriqui().getB16().addActionListener(this);
-
+		quatriqui.getPregistro().getBtrematch().addActionListener(this);
 
 	}
 
@@ -262,7 +253,7 @@ public class Controller implements ActionListener, MouseListener {
 		if((e.getActionCommand().equals("UNO"))){
 			
 			
-				quatriqui.getPanelCuatriqui().getLb1().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb1().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb1().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB1().setVisible(false);
 				jugadores();
@@ -272,9 +263,9 @@ public class Controller implements ActionListener, MouseListener {
 				
 				
 			}if((e.getActionCommand().equals("DOS"))) {
-				quatriqui.getPanelCuatriqui().getLb2().setText(juego.turnos());
+				quatriqui.getPanelCuatriqui().getLb2().setText(juego_cuatriqui.turnos());
 				
-				quatriqui.getPanelCuatriqui().getLb2().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb2().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb2().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB2().setVisible(false);
 				jugadores();
@@ -283,7 +274,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("TRES"))) {
-				quatriqui.getPanelCuatriqui().getLb3().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb3().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb3().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB3().setVisible(false);
 				jugadores();
@@ -292,7 +283,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("CUATRO"))) {
-				quatriqui.getPanelCuatriqui().getLb4().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb4().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb4().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB4().setVisible(false);
 				jugadores();
@@ -301,7 +292,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("CINCO"))) {
-				quatriqui.getPanelCuatriqui().getLb5().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb5().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb5().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB5().setVisible(false);
 				jugadores();
@@ -310,7 +301,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("SEIS"))) {
-				quatriqui.getPanelCuatriqui().getLb6().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb6().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb6().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB6().setVisible(false);
 				jugadores();
@@ -319,7 +310,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("SIETE"))) {
-				quatriqui.getPanelCuatriqui().getLb7().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb7().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb7().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB7().setVisible(false);
 				jugadores();
@@ -328,7 +319,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("OCHO"))) {
-				quatriqui.getPanelCuatriqui().getLb8().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb8().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb8().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB8().setVisible(false);
 				jugadores();
@@ -337,7 +328,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("NUEVE"))) {
-				quatriqui.getPanelCuatriqui().getLb9().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb9().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb9().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB9().setVisible(false);
 				jugadores();
@@ -346,7 +337,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("DIEZ"))) {
-				quatriqui.getPanelCuatriqui().getLb10().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb10().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb10().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB10().setVisible(false);
 				jugadores();
@@ -355,7 +346,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("ONCE"))) {
-				quatriqui.getPanelCuatriqui().getLb11().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb11().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb11().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB11().setVisible(false);
 				jugadores();
@@ -364,7 +355,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("DOCE"))){
-				quatriqui.getPanelCuatriqui().getLb12().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb12().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb12().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB12().setVisible(false);
 				jugadores();
@@ -373,7 +364,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("TRECE"))) {
-				quatriqui.getPanelCuatriqui().getLb13().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb13().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb13().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB13().setVisible(false);
 				jugadores();
@@ -382,7 +373,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("CATORCE"))) {
-				quatriqui.getPanelCuatriqui().getLb14().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb14().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb14().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB14().setVisible(false);
 				jugadores();
@@ -391,7 +382,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("QUINCE"))) {
-				quatriqui.getPanelCuatriqui().getLb15().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb15().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb15().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB15().setVisible(false);
 				jugadores();
@@ -400,7 +391,7 @@ public class Controller implements ActionListener, MouseListener {
 				comprobar();
 				
 			}else if((e.getActionCommand().equals("DIECISEIS"))) {
-				quatriqui.getPanelCuatriqui().getLb16().setText(JuegoCuatriqui.turnos());
+				quatriqui.getPanelCuatriqui().getLb16().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb16().setVisible(true);
 				quatriqui.getPanelCuatriqui().getB16().setVisible(false);
 				jugadores();
@@ -408,6 +399,10 @@ public class Controller implements ActionListener, MouseListener {
 				jugadores();
 				comprobar();
 				
+			}
+			
+			if((e.getActionCommand().equals("REMATCH"))) {
+				registro.actualizarRegistro(texto);
 			}
 	
 	if((e.getActionCommand().equals("MENU"))) {
@@ -425,29 +420,5 @@ public class Controller implements ActionListener, MouseListener {
 
 	}
 
-	public void mouseClicked(MouseEvent e) {
 
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void mousePressed(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-
-	}
 }

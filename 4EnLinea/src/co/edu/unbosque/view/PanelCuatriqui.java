@@ -19,6 +19,7 @@ public class PanelCuatriqui extends JPanel{
 		
 		setLayout(null);
 		
+		
 		funcionar();
 		
 	}
