@@ -20,7 +20,6 @@ public class Quatriqui extends JFrame {
 	private PanelCuatriqui PanelCuatriqui;
 	
 	private JButton bt_Menu;
-	private JPanel cuatriqui;
 	
 	private String Jugador1;
 	private String Jugador2;
@@ -84,14 +83,6 @@ public class Quatriqui extends JFrame {
 		this.getContentPane().setBackground(new Color(251,201,40));
 	}
 
-	public JPanel getCuatriqui() {
-		return cuatriqui;
-	}
-
-
-	public void setCuatriqui(JPanel cuatriqui) {
-		this.cuatriqui = cuatriqui;
-	}
 
 
 	public JButton getBt_Menu() {
