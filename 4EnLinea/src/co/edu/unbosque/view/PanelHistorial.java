@@ -16,7 +16,7 @@ public class PanelHistorial extends JPanel{
 		
 		setBorder(new TitledBorder("Historial de partidas"));
 		setLayout(null);
-		setBackground(Color.BLACK);
+		setBackground(Color.white);
 		
 		funcionar();
 	}
@@ -24,9 +24,9 @@ public class PanelHistorial extends JPanel{
 	private void funcionar() {
 		
 		area_texto = new JTextArea();
-		area_texto.setBounds(10, 10, 400, 400);
+		area_texto.setBounds(20, 20, 400, 400);
 		JScrollPane panel = new JScrollPane(area_texto);
-		panel.setBounds(2, 20, 360, 200);
+		panel.setBounds(20, 20, 400, 380);
 		add(panel);
 	}
 
