@@ -106,5 +106,25 @@ public class PanelRegistro extends JPanel {
 		this.btrematch = btrematch;
 	}
 
+
+	public List getlPuntajeJ1() {
+		return lPuntajeJ1;
+	}
+
+
+	public void setlPuntajeJ1(List lPuntajeJ1) {
+		this.lPuntajeJ1 = lPuntajeJ1;
+	}
+
+
+	public List getlPuntajeJ2() {
+		return lPuntajeJ2;
+	}
+
+
+	public void setlPuntajeJ2(List lPuntajeJ2) {
+		this.lPuntajeJ2 = lPuntajeJ2;
+	}
+
 	
 }
