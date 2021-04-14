@@ -3,6 +3,7 @@ package co.edu.unbosque.view;
 import java.awt.Color;
 import java.awt.FlowLayout;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -20,6 +21,8 @@ public class PanelRegistro extends JPanel {
 	private JLabel puntajeJ1;
 	private JLabel puntajeJ2;
 	private JLabel empates;
+	
+	private JButton btrematch;
 	
 
 	public PanelRegistro(String j1, String j2) {
@@ -64,6 +67,12 @@ public class PanelRegistro extends JPanel {
 		empates = new JLabel("Empates: ");
 		empates.setBounds(100,300,200,25);
 		add(empates);
+		
+		btrematch = new JButton("Rematch");
+		btrematch.setActionCommand("REMATCH");
+		btrematch.setBounds(120, 500, 120, 25);
+		btrematch.setVisible(true);
+		add(btrematch);
 	}
 
 	
