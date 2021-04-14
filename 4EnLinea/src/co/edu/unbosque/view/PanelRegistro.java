@@ -17,7 +17,9 @@ public class PanelRegistro extends JPanel {
 	private JLabel nombjugador1;
 	private JLabel lbjugador2;
 	private JLabel nombjugador2;
-
+	private JLabel puntajeJ1;
+	private JLabel puntajeJ2;
+	private JLabel empates;
 	
 
 	public PanelRegistro(String j1, String j2) {
@@ -46,6 +48,9 @@ public class PanelRegistro extends JPanel {
 		nombjugador1 = new JLabel(j1);
 		nombjugador1.setBounds(10,240,200,25);
 		add(nombjugador1);
+		puntajeJ1 = new JLabel("Puntaje: ");
+		puntajeJ1.setBounds(10,260,200,25);
+		add(puntajeJ1);
 		
 		nombjugador2 = new JLabel("Jugador 2:");
 		nombjugador2.setBounds(200,220,200,25);
@@ -53,6 +58,9 @@ public class PanelRegistro extends JPanel {
 		nombjugador2 = new JLabel(j2);
 		nombjugador2.setBounds(200,240,200,25);
 		add(nombjugador2);
+		puntajeJ2 = new JLabel("Puntaje: ");
+		puntajeJ2.setBounds(200,260,200,25);
+		add(puntajeJ2);
 	}
 
 	

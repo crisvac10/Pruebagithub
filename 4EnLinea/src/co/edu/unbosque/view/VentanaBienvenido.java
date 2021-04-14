@@ -26,7 +26,7 @@ public class VentanaBienvenido extends JFrame {
 		alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 		setLayout(null);
 		setSize(500, 538);
-		setLocation((int) (ancho / 3.2), (int) (alto / 6));
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Botones();
