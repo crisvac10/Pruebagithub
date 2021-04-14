@@ -57,7 +57,7 @@ public class PanelRegistro extends JPanel {
 		puntajeJ1.setBounds(10,260,200,25);
 		add(puntajeJ1);
 		lPuntajeJ1= new List(); 
-		lPuntajeJ1.setBounds(10,290,60, 30);
+		lPuntajeJ1.setBounds(10,290,60, 20);
 		add(lPuntajeJ1);
 		
 		nombjugador2 = new JLabel("Jugador 2:");
@@ -70,14 +70,14 @@ public class PanelRegistro extends JPanel {
 		puntajeJ2.setBounds(200,260,200,25);
 		add(puntajeJ2);
 		lPuntajeJ2= new List(); 
-		lPuntajeJ2.setBounds(200,290,60, 30);
+		lPuntajeJ2.setBounds(200,290,60, 20);
 		add(lPuntajeJ2);
 		
 		empates = new JLabel("Empates: ");
 		empates.setBounds(100,300,200,25);
 		add(empates);
 		lEmpate= new List(); 
-		lEmpate.setBounds(100,330,60, 30);
+		lEmpate.setBounds(100,330,60, 20);
 		add(lEmpate);
 		
 		btrematch = new JButton("Rematch");
