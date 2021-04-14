@@ -4,12 +4,12 @@ import co.edu.unbosque.view.PanelCuatriqui;
 public class JuegoCuatriqui {
 	public PanelCuatriqui PanelCuatriqui;
 	private String turno = "O";
-	private int puntajeJ1;
-	private int puntajeJ2;
-	private int empate;
+	private int puntajeJ1=0;
+	private int puntajeJ2=0;
+	private int empate=0;
 	
 	public JuegoCuatriqui() {
-		PanelCuatriqui = new PanelCuatriqui();
+		
 		
 
 	}
@@ -52,12 +52,12 @@ public class JuegoCuatriqui {
 	
 	public String getEmpate() {
 		String emp ="";
-		emp= String.valueOf(emp);
+		emp= String.valueOf(empate);
 		return emp;
 	}
 	
-	public void setEmpate(int empate) {
-		this.empate = empate;
+	public void setEmpate(int string) {
+		this.empate = string;
 	}
 
 }

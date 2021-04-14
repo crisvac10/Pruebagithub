@@ -26,7 +26,6 @@ public class Controller implements ActionListener {
 	public Quatriqui quatriqui;
 	public VentanaHistorial ventana_historial;
 	public Registro registro;
-
 	public JuegoCuatriqui juego_cuatriqui;
 	
 	public String jugador1;	
@@ -38,7 +37,6 @@ public class Controller implements ActionListener {
 		ventana_historial = new VentanaHistorial();
 		quatriqui = new Quatriqui();
 		registro = new Registro();
-		
 		juego_cuatriqui= new JuegoCuatriqui();
 		
 		jugador1 = quatriqui.getJugador1();	
@@ -69,120 +67,180 @@ public class Controller implements ActionListener {
 		) {
 			System.out.println("X ganó ");
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+		
 		}else if (quatriqui.getPanelCuatriqui().getLb5().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb6().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb7().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb8().getText()== "X"
+				
 				){
 			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+			
 		}else if(quatriqui.getPanelCuatriqui().getLb9().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb10().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb11().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb12().getText()== "X"
 				) {
-			System.out.println("X ganó ");	
+			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+			
 		}else if (quatriqui.getPanelCuatriqui().getLb13().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb14().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb15().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb16().getText()== "X"
 				){
 			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+			
 		}else if (quatriqui.getPanelCuatriqui().getLb1().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb5().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb9().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb13().getText()== "X"
 				){
 			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+			
 		}else if (quatriqui.getPanelCuatriqui().getLb2().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb6().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb10().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb14().getText()== "X"
 				){
 			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+			
 		}else if (quatriqui.getPanelCuatriqui().getLb3().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb7().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb11().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb15().getText()== "X"
 				){
 			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+			
 		}else if (quatriqui.getPanelCuatriqui().getLb4().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb8().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb12().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb16().getText()== "X"
 				){
 			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+			
 		}else if (quatriqui.getPanelCuatriqui().getLb1().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb6().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb11().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb16().getText()== "X"
 				){
 			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+			
 		}else if (quatriqui.getPanelCuatriqui().getLb13().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb10().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb7().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb4().getText()== "X"
 				){
 			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
+			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
+			
 		}else if (quatriqui.getPanelCuatriqui().getLb1().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb2().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb3().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb4().getText()== "O"
 				) {
 					System.out.println("O Ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if (quatriqui.getPanelCuatriqui().getLb5().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb6().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb7().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb8().getText()== "O"
 				){
 					System.out.println("O ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if(quatriqui.getPanelCuatriqui().getLb9().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb10().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb11().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb12().getText()== "O"
 				) {
-					System.out.println("O ganó ");	
+					System.out.println("O ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if (quatriqui.getPanelCuatriqui().getLb13().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb14().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb15().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb16().getText()== "O"
 				){
 					System.out.println("O ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if (quatriqui.getPanelCuatriqui().getLb1().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb5().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb9().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb13().getText()== "O"
 				){
 					System.out.println("O ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if (quatriqui.getPanelCuatriqui().getLb2().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb6().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb10().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb14().getText()== "O"
 				){
 					System.out.println("O ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if (quatriqui.getPanelCuatriqui().getLb3().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb7().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb11().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb15().getText()== "O"
 				){
 					System.out.println("O ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if (quatriqui.getPanelCuatriqui().getLb4().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb8().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb12().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb16().getText()== "O"
 				){
 					System.out.println("O ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if (quatriqui.getPanelCuatriqui().getLb1().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb6().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb11().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb16().getText()== "O"
 				){
 					System.out.println("O ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if (quatriqui.getPanelCuatriqui().getLb13().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb10().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb7().getText()== "O"
 				& quatriqui.getPanelCuatriqui().getLb4().getText()== "O"
 				){
 					System.out.println("O ganó ");
+					juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2())+1);
+					quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
+					
 		}else if (
 				quatriqui.getPanelCuatriqui().getLb1().getText()!= ""
 				& quatriqui.getPanelCuatriqui().getLb2().getText()!= ""
@@ -202,6 +260,8 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb16().getText()!= ""
 				){
 					System.out.println("Empate ");
+					juego_cuatriqui.setEmpate(Integer.parseInt(juego_cuatriqui.getEmpate())+1);
+					quatriqui.getPregistro().getlEmpate().setText(juego_cuatriqui.getEmpate());
 				}
 	}
 
