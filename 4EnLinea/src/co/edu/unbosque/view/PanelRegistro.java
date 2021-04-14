@@ -13,12 +13,17 @@ import javax.swing.border.TitledBorder;
 public class PanelRegistro extends JPanel {
 
 	private JTextArea area_texto;
+	private JLabel lbjugador1;
+	private JLabel nombjugador1;
+	private JLabel lbjugador2;
+	private JLabel nombjugador2;
 
 	public PanelRegistro() {
 
 		setBorder(new TitledBorder("Registro de jugadas"));
 		setLayout(null);
 		setBackground(Color.white);
+
 
 		funcionar();
 
@@ -30,10 +35,25 @@ public class PanelRegistro extends JPanel {
 		area_texto = new JTextArea();
 		area_texto.setBounds(10, 10, 400, 600);
 		JScrollPane panel = new JScrollPane(area_texto);
-		panel.setBounds(2, 80, 400, 600);
+		panel.setBounds(2, 20, 360, 200);
 		add(panel);
+		
+		lbjugador1 = new JLabel("Jugador 1:");
+		lbjugador1.setBounds(10,220,200,25);
+		add(lbjugador1);
+		nombjugador1 = new JLabel(":DDDDDDDDDDDDDDDDD");
+		nombjugador1.setBounds(10,250,200,25);
+		add(nombjugador1);
+		
+		nombjugador2 = new JLabel("Jugador 2:");
+		nombjugador2.setBounds(200,220,200,25);
+		add(nombjugador2);
+		nombjugador2 = new JLabel(":DDDDDDDDDDDDDDDdd");
+		nombjugador2.setBounds(200,250,200,25);
+		add(nombjugador2);
 	}
 
+	
 	public JTextArea getArea_texto() {
 		return area_texto;
 	}
