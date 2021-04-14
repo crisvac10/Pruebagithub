@@ -3,7 +3,6 @@ package co.edu.unbosque.view;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.List;
-
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
