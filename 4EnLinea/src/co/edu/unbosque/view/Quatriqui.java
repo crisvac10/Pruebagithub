@@ -17,10 +17,9 @@ public class Quatriqui extends JFrame {
 	private ImageIcon ImagenCuatriqui;// imagen de fondo de la ventana Bienvenido
 	private JLabel quatriqui; // Atributo Jlabel que contiene la imagen de fondo
 	private PanelRegistro pregistro;
-	private PanelCuatriqui PanelCuatriqui;
+	private PanelCuatriqui panel_cuatriqui;
 	
 	private JButton bt_Menu;
-	private JPanel cuatriqui;
 	
 	private String Jugador1;
 	private String Jugador2;
@@ -75,23 +74,15 @@ public class Quatriqui extends JFrame {
 		pregistro.setVisible(true);
 		getContentPane().add(pregistro);
 		
-		PanelCuatriqui = new PanelCuatriqui();
-		PanelCuatriqui.setBounds(10, 10, 384, 384);
-		PanelCuatriqui.setOpaque(false);
-		PanelCuatriqui.setVisible(true);
-		getContentPane().add(PanelCuatriqui);
+		panel_cuatriqui = new PanelCuatriqui();
+		panel_cuatriqui.setBounds(10, 10, 384, 384);
+		panel_cuatriqui.setOpaque(false);
+		panel_cuatriqui.setVisible(true);
+		getContentPane().add(panel_cuatriqui);
 		
 		this.getContentPane().setBackground(new Color(251,201,40));
 	}
 
-	public JPanel getCuatriqui() {
-		return cuatriqui;
-	}
-
-
-	public void setCuatriqui(JPanel cuatriqui) {
-		this.cuatriqui = cuatriqui;
-	}
 
 
 	public JButton getBt_Menu() {
@@ -112,12 +103,12 @@ public class Quatriqui extends JFrame {
 
 
 	public PanelCuatriqui getPanelCuatriqui() {
-		return PanelCuatriqui;
+		return panel_cuatriqui;
 	}
 
 
 	public void setPanelCuatriqui(PanelCuatriqui panelCuatriqui) {
-		PanelCuatriqui = panelCuatriqui;
+		panel_cuatriqui = panelCuatriqui;
 	}
 
 
