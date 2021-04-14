@@ -1,9 +1,15 @@
 package co.edu.unbosque.model;
+import co.edu.unbosque.view.PanelCuatriqui;
 
 public class JuegoCuatriqui {
-	String turno = "O";
+	public PanelCuatriqui PanelCuatriqui;
+	private String turno = "O";
+	
+	public JuegoCuatriqui() {
+		PanelCuatriqui = new PanelCuatriqui();
+		
 
-
+	}
 	public String turnos() {
 
 		if (turno.equals("X")) {
@@ -13,11 +19,8 @@ public class JuegoCuatriqui {
 		}
 		return turno;
 	}
-
-
-	public String getTurno() {
-		return turno;
-	}
+	
+	
 
 
 	public void setTurno(String turno) {

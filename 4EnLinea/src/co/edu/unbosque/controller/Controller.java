@@ -1,27 +1,39 @@
 package co.edu.unbosque.controller;
 
+
 import java.awt.Color;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Set;
 
 import javax.swing.JLabel;
 
+import co.edu.unbosque.model.JuegoCuatriqui;
 import co.edu.unbosque.model.Registro;
 import co.edu.unbosque.view.PanelCuatriqui;
+
 import co.edu.unbosque.view.PanelRegistro;
 import co.edu.unbosque.view.Quatriqui;
 import co.edu.unbosque.view.VentanaBienvenido;
 import co.edu.unbosque.view.VentanaHistorial;
 import co.edu.unbosque.model.JuegoCuatriqui;
 
-public class Controller implements ActionListener {
+public class Controller implements ActionListener, MouseListener {
+	private PanelCuatriqui panelcua;
+
+
+
 
 	public VentanaBienvenido ventana_bienvenido;
 	public Quatriqui quatriqui;
 	public VentanaHistorial ventana_historial;
 	public Registro registro;
+
+	public JuegoCuatriqui juego;
+
 	public JuegoCuatriqui JuegoCuatriqui;
 	
 	public String jugador1;	
@@ -33,6 +45,8 @@ public class Controller implements ActionListener {
 		ventana_historial = new VentanaHistorial();
 		quatriqui = new Quatriqui();
 		registro = new Registro();
+		juego = new JuegoCuatriqui();
+		
 		JuegoCuatriqui = new JuegoCuatriqui();
 		
 		jugador1 = quatriqui.getJugador1();	
@@ -197,11 +211,14 @@ public class Controller implements ActionListener {
 					System.out.println("Empate ");
 				}
 	}
-	
+
 	public void asignarOyentes() {
 		ventana_bienvenido.getBt_Historial().addActionListener(this);
 		ventana_bienvenido.getBt_Jugar().addActionListener(this);
 		quatriqui.getBt_Menu().addActionListener(this);
+		quatriqui.getPanelCuatriqui().getLb1().addMouseListener(this);
+
+
 		ventana_historial.getBt_Regresar().addActionListener(this);
 		quatriqui.getPanelCuatriqui().getB1().addActionListener(this);
 		quatriqui.getPanelCuatriqui().getB2().addActionListener(this);
@@ -220,19 +237,22 @@ public class Controller implements ActionListener {
 		quatriqui.getPanelCuatriqui().getB15().addActionListener(this);
 		quatriqui.getPanelCuatriqui().getB16().addActionListener(this);
 
+
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		
-		//VENTANA QUATRIQUI
-		if((e.getActionCommand().equals("JUGAR"))){
-			
+
+		// VENTANA QUATRIQUI
+		if ((e.getActionCommand().equals("JUGAR"))) {
+
 			ventana_bienvenido.setVisible(false);
 			quatriqui.setVisible(true);
-			
-			
-			
-				
+
+			String texto = registro.leerRegistro();
+			quatriqui.getPregistro().getArea_texto().setText(texto);
+
+
+	
 		}
 		
 		String texto = registro.leerRegistro();
@@ -252,6 +272,7 @@ public class Controller implements ActionListener {
 				
 				
 			}if((e.getActionCommand().equals("DOS"))) {
+				quatriqui.getPanelCuatriqui().getLb2().setText(juego.turnos());
 				
 				quatriqui.getPanelCuatriqui().getLb2().setText(JuegoCuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb2().setVisible(true);
@@ -388,24 +409,45 @@ public class Controller implements ActionListener {
 				comprobar();
 				
 			}
-		//conexi�n con la persistencia	
-		{
-		
-			
-		//VENTANA BIENVENIDA		
-		}if((e.getActionCommand().equals("MENU"))) {
+	
+	if((e.getActionCommand().equals("MENU"))) {
 			ventana_bienvenido.setVisible(true);
 			quatriqui.setVisible(false);
 			ventana_historial.setVisible(false);
-		
-		//VENTANA HISTORIAL
-		}if((e.getActionCommand().equals("HISTORIAL"))) {
-			
+
+			// VENTANA HISTORIAL
+		}
+		if ((e.getActionCommand().equals("HISTORIAL"))) {
+
 			ventana_bienvenido.setVisible(false);
 			ventana_historial.setVisible(true);
 		}
-		
-		
+
 	}
 
+	public void mouseClicked(MouseEvent e) {
+
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void mousePressed(MouseEvent e) {
+
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
 }

@@ -18,6 +18,8 @@ public class PanelRegistro extends JPanel {
 	private JLabel lbjugador2;
 	private JLabel nombjugador2;
 
+	
+
 	public PanelRegistro(String j1, String j2) {
 
 		setBorder(new TitledBorder("Registro de jugadas"));
