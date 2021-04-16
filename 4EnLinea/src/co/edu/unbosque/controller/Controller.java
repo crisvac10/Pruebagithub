@@ -132,6 +132,7 @@ public class Controller implements ActionListener {
 		hr = 0;
 		min = 0;
 		seg = 0;
+	
 
 	}
 
