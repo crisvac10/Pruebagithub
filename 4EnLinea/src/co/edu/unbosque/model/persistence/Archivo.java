@@ -70,33 +70,6 @@ public class Archivo {
 	 */
 		
 	
-	public String leerArchivo2() {
-		FileInputStream fis;
-		InputStreamReader isr;
-		BufferedReader linea; 
-		try {
-			fis = new FileInputStream(f2);
-			isr = new InputStreamReader(fis);
-			linea = new BufferedReader(isr);
-			
-			if(f2.exists()) {
-				String linea_arch = linea.readLine();
-				String archivo_total = linea_arch;
-				while(linea_arch != null) {
-					linea_arch = linea.readLine();
-					if(linea_arch != null) {
-						archivo_total = archivo_total + "\n" + linea_arch;
-					}
-				}
-				linea.close();
-				return archivo_total;
-			}else {
-				return "El archivo no existe";
-			}
-		}catch(IOException e) {
-			return "No se pudo leer el archivo";
-		}
-	}
 /**
  * Metodo que permite ingresar texto dentro de la memoria buffer	
  * @param frase linea de texto
@@ -121,20 +94,6 @@ public class Archivo {
 	 * @param frase linea de texto
 	 * @return String
 	 */	
-	public String escribirArchivo2(String frase) {
-		try {
-			InputStreamReader isr = new InputStreamReader(System.in);
-			BufferedReader linea = new BufferedReader(isr);
-			FileWriter lineatx = new FileWriter(f2);
-			String linea_arch = frase;
-			lineatx.write(linea_arch + "\r\n");
-			lineatx.close();
-			return "Linea ingresada con exito";
-		}catch(IOException e) {
-			return "No se pudo escribir en el archivo";
-		}
-		
-	}
 
 }
  
