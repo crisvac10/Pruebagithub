@@ -72,5 +72,14 @@ public class VentanaHistorial extends JFrame{
 	public void setBt_Regresar(JButton bt_Regresar) {
 		this.bt_Regresar = bt_Regresar;
 	}
+	
+	public PanelHistorial getPanel_historial() {
+	return panel_historial;
+}
+	public void setPanel_historial(PanelHistorial panel_historial) {
+	this.panel_historial = panel_historial;
+}
+	
+	
 
 }
