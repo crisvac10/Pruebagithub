@@ -1,9 +1,1 @@
-
-
-a su jugada fue Lb1 Tiempo: 0 : 0 : 0
-x su jugada fue Lb2  Tiempo: 0 : 0 : 1
-a su jugada fue Lb5 Tiempo: 0 : 0 : 1
-x su jugada fue Lb6 Tiempo: 0 : 0 : 1
-a su jugada fue Lb9 Tiempo: 0 : 0 : 2
-x su jugada fue Lb10 Tiempo: 0 : 0 : 2
-a su jugada fue Lb13 Tiempo: 0 : 0 : 2
+Linea ingresada con exito
