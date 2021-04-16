@@ -1,12 +1,11 @@
 package co.edu.unbosque.model;
-import co.edu.unbosque.view.PanelCuatriqui;
 /**
  * Clase JuegoCuatriqui donde da los turnos para el juego
  * @author Jinetes del apocalipsis
  *
  */
 public class JuegoCuatriqui {
-	public PanelCuatriqui PanelCuatriqui;// Atributo PanelCuatriqui renombrado 
+	
 	private String turno = "O";// Atributo tipo String que inicializa el turno 
 	private int puntajeJ1=0;// Atributo tipo int que contiene el puntaje del Jugador 1
 	private int puntajeJ2=0;// Atributo tipo int que contiene el puntaje del Jugador 2
