@@ -5,10 +5,14 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
+/**
+ * Clase VentanaHistorial que extiende de JFrame, aqui es donde se encuentra el historial delas partidas
+ * @author Jinetes del apocalipsis
+ *
+ */
 public class VentanaHistorial extends JFrame{
 	
-	private PanelHistorial panel_historial;
+	private PanelHistorial panel_historial;// Atributo Panel_historial querenombran la clase PanelHistorial.
 	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
 	private int alto;// Atributo que contiene el alto de la pantalla
@@ -16,7 +20,7 @@ public class VentanaHistorial extends JFrame{
 	
 	private JButton bt_Regresar;// Atributo que contiene el boton para regresar a la ventana principal 
 	/**
-	 * Constructor de la clase VentanaHistorial  que inicializa sus atributos y metodos
+	 * Constructor de la clase VentanaHistorial  que inicializa losmetodos y asignas las dimensiones de la ventana
 	 */
 	public VentanaHistorial (){
 		
