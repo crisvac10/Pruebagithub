@@ -4,17 +4,17 @@ import java.io.File;
 
 import co.edu.unbosque.model.persistence.Archivo;
 
-public class Registro {
-	
+public class Registro2 {
+
 	private String texto;
 	Archivo arch;
 	
-	public Registro() {
+	public Registro2() {
 		arch = new Archivo();
 	}
 	
-	public Registro(File f) {
-		arch = new Archivo(f, f);
+	public Registro2(File f2) {
+		arch = new Archivo(f2, f2);
 	}
 	
 	public String leerRegistro() {
@@ -35,3 +35,4 @@ public class Registro {
 	}
 	
 }
+

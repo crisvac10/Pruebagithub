@@ -1,0 +1,8 @@
+
+a su jugada fue Lb1 Tiempo: 0 : 0 : 0
+ su jugada fue Lb2  Tiempo: 0 : 0 : 1
+a su jugada fue Lb5 Tiempo: 0 : 0 : 1
+ su jugada fue Lb6 Tiempo: 0 : 0 : 2
+a su jugada fue Lb9 Tiempo: 0 : 0 : 2
+ su jugada fue Lb10 Tiempo: 0 : 0 : 3
+a su jugada fue Lb13 Tiempo: 0 : 0 : 3

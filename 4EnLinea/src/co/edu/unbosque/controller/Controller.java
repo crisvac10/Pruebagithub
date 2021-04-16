@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 
 import co.edu.unbosque.model.JuegoCuatriqui;
 import co.edu.unbosque.model.Registro;
+import co.edu.unbosque.model.Registro2;
 import co.edu.unbosque.view.PanelCuatriqui;
 
 import co.edu.unbosque.view.PanelRegistro;
@@ -25,6 +26,7 @@ public class Controller implements ActionListener {
 	public Quatriqui quatriqui;
 	public VentanaHistorial ventana_historial;
 	public Registro registro;
+	public Registro2 registro2;
 	public JuegoCuatriqui juego_cuatriqui;
 
 	public String jugador1;
@@ -34,11 +36,13 @@ public class Controller implements ActionListener {
 	public boolean estado = true;
 	public int min, seg ,hr;
 	public String tiempo;
+	
 	public Controller() {
 		ventana_bienvenido = new VentanaBienvenido();
 		ventana_historial = new VentanaHistorial();
 		quatriqui = new Quatriqui();
 		registro = new Registro();
+		registro2 = new Registro2();
 		juego_cuatriqui = new JuegoCuatriqui();
 
 		jugador1 = quatriqui.getJugador1();
@@ -127,6 +131,8 @@ public class Controller implements ActionListener {
 		quatriqui.getPanelCuatriqui().getB14().setVisible(true);
 		quatriqui.getPanelCuatriqui().getB15().setVisible(true);
 		quatriqui.getPanelCuatriqui().getB16().setVisible(true);
+		
+		//quatriqui.getPregistro().getArea_texto().setText("");
 
 		hilo.stop();
 		hr = 0;
@@ -425,7 +431,11 @@ public class Controller implements ActionListener {
 			Hilo();
 
 		}
-	
+		
+		
+		String texto2 = registro2.leerRegistro();
+		texto2 = quatriqui.getPregistro().getArea_texto().getText();
+		
 		String texto = registro.leerRegistro();
 		texto = quatriqui.getPregistro().getArea_texto().getText();
 
@@ -596,6 +606,8 @@ public class Controller implements ActionListener {
 
 		if ((e.getActionCommand().equals("REMATCH"))) {
 			registro.actualizarRegistro(texto);
+			quatriqui.getPregistro().getArea_texto().setText("");
+			
 		}
 
 		if ((e.getActionCommand().equals("MENU"))) {
