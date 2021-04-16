@@ -4,7 +4,6 @@ import java.awt.Color;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.Serial;
 import java.util.Set;
 
 import javax.swing.JLabel;
@@ -144,7 +143,6 @@ public class Controller implements ActionListener {
 		quatriqui.getPanelCuatriqui().getB15().setVisible(true);
 		quatriqui.getPanelCuatriqui().getB16().setVisible(true);
 		
-		//quatriqui.getPregistro().getArea_texto().setText("");
 
 		hilo.stop();
 		hr = 0;
