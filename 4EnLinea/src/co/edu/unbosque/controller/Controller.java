@@ -39,6 +39,8 @@ public class Controller implements ActionListener {
 	public boolean estado = true;// Atributo de tipo boolean que cambia el estado del cronometro
 	public int min, seg ,hr;// atributos de tipo int que contienen las horas, minutos, segundos del cronometro
 	public String tiempo;// Atributos de tipo String que contiene el tiempo del Cronometro
+	public String texto2;
+	
 	/**
 	 * Constructor de la clase controller que inicializa las clases importadas y los oyentes
 	 */
@@ -156,6 +158,8 @@ public class Controller implements ActionListener {
  * Metodo de tipo void que comprueba si un jugador ha ganado
  */
 	public void comprobar() {
+		String texto2 = registro.leerRegistro2();
+		texto2 = ventana_historial.getPanel_historial().getArea_texto().getText();
 
 		if (quatriqui.getPanelCuatriqui().getLb1().getText() == "X"
 				& quatriqui.getPanelCuatriqui().getLb2().getText() == "X"
@@ -163,9 +167,13 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb4().getText() == "X") {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
+			
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 			
 
@@ -178,10 +186,12 @@ public class Controller implements ActionListener {
 		) {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
-			reiniciarTodo();
+
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb9().getText() == "X"
@@ -190,9 +200,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb12().getText() == "X") {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb13().getText() == "X"
@@ -201,9 +213,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb16().getText() == "X") {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb1().getText() == "X"
@@ -212,9 +226,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb13().getText() == "X") {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb2().getText() == "X"
@@ -223,9 +239,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb14().getText() == "X") {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb3().getText() == "X"
@@ -234,9 +252,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb15().getText() == "X") {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb4().getText() == "X"
@@ -245,9 +265,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb16().getText() == "X") {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb1().getText() == "X"
@@ -256,9 +278,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb16().getText() == "X") {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb13().getText() == "X"
@@ -267,9 +291,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb4().getText() == "X") {
 			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ1().setText(juego_cuatriqui.getPuntajeJ1());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb1().getText() == "O"
@@ -278,9 +304,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb4().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb5().getText() == "O"
@@ -289,9 +317,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb8().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb9().getText() == "O"
@@ -300,9 +330,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb12().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb13().getText() == "O"
@@ -311,9 +343,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb16().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Timepo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb1().getText() == "O"
@@ -322,9 +356,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb13().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb2().getText() == "O"
@@ -333,9 +369,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb14().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
  
 		} else if (quatriqui.getPanelCuatriqui().getLb3().getText() == "O"
@@ -344,9 +382,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb15().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb4().getText() == "O"
@@ -355,9 +395,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb16().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb1().getText() == "O"
@@ -366,9 +408,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb16().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb13().getText() == "O"
@@ -377,9 +421,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb4().getText() == "O") {
 			juego_cuatriqui.setPuntajeJ2(Integer.parseInt(juego_cuatriqui.getPuntajeJ2()) + 1);
 			quatriqui.getPregistro().getlPuntajeJ2().setText(juego_cuatriqui.getPuntajeJ2());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Ganó el jugador: "+ jugadores()+ " Perdió el jugador: "+ jugadores()+ " Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 
 		} else if (quatriqui.getPanelCuatriqui().getLb1().getText() != ""
@@ -400,9 +446,11 @@ public class Controller implements ActionListener {
 				& quatriqui.getPanelCuatriqui().getLb16().getText() != "") {
 			juego_cuatriqui.setEmpate(Integer.parseInt(juego_cuatriqui.getEmpate()) + 1);
 			quatriqui.getPregistro().getlEmpate().setText(juego_cuatriqui.getEmpate());
-			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui, "Han empatado!! " + 
 			"\nAhora comienza el jugador: " + jugadores());
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+
+					"\n" +"Los jugadores : "+ jugadores()+ " y "+ jugadores()+" Han empatado!"+" Tiempo de juego: "+hr+" : "+min+" : "+seg);
+			reiniciarTodo();
 			Hilo();
 		}
 	}
@@ -622,7 +670,6 @@ public class Controller implements ActionListener {
 
 		if ((e.getActionCommand().equals("REMATCH"))) {
 			reiniciarTodo();
-		//	registro.actualizarRegistro(texto);
 			hilo.stop();
 			hr = 0;
 			min= 0;
@@ -645,13 +692,9 @@ public class Controller implements ActionListener {
 
 			// VENTANA HISTORIAL
 		}
-		if ((e.getActionCommand().equals("HISTORIAL"))) {
-			
-			String texto2 = registro.leerRegistro2();
-//			texto2 = "Gano: "+ jugadores()+ " Perdio: "+ jugadores();
-			texto2 = ventana_historial.getPanel_historial().getArea_texto().getText();
 		
-			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+"\n" +"Gano: "+ jugadores()+ " Perdio: "+ jugadores());
+
+		if ((e.getActionCommand().equals("HISTORIAL"))) {
 			
 			registro.actualizarRegistro2(texto2);
 			

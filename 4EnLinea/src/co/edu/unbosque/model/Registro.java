@@ -56,6 +56,9 @@ public class Registro {
 	 * @return archivo que se escribio
 	 */
 	public String actualizarRegistro2(String frase) {
+		if(texto !="") {
+			arch.leerArchivo2();
+		}
 		return arch.escribirArchivo(frase);
 	}
 	/**
