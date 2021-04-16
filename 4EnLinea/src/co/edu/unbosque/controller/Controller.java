@@ -597,12 +597,21 @@ public class Controller implements ActionListener {
 
 		if ((e.getActionCommand().equals("REMATCH"))) {
 			registro.actualizarRegistro(texto);
+			hilo.stop();
+			hr = 0;
+			min= 0;
+			seg= 0;
+			Hilo();
+
+			
 		}
 
 		if ((e.getActionCommand().equals("MENU"))) {
 			ventana_bienvenido.setVisible(true);
 			quatriqui.setVisible(false);
 			ventana_historial.setVisible(false);
+			hilo.stop();
+			
 
 			// VENTANA HISTORIAL
 		}
