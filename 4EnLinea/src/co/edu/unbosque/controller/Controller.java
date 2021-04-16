@@ -4,6 +4,7 @@ import java.awt.Color;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.Serial;
 import java.util.Set;
 
 import javax.swing.JLabel;
@@ -11,6 +12,7 @@ import javax.swing.JOptionPane;
 
 import co.edu.unbosque.model.JuegoCuatriqui;
 import co.edu.unbosque.model.Registro;
+import co.edu.unbosque.model.Registro2;
 import co.edu.unbosque.view.PanelCuatriqui;
 
 import co.edu.unbosque.view.PanelRegistro;
@@ -18,27 +20,37 @@ import co.edu.unbosque.view.Quatriqui;
 import co.edu.unbosque.view.VentanaBienvenido;
 import co.edu.unbosque.view.VentanaHistorial;
 import co.edu.unbosque.model.JuegoCuatriqui;
-
+/**
+ * Clase Controller que controla el funcionamiento del programa
+ * @author Jinetes del apocalipsis
+ *@serial 2021
+ *@version 5.0
+ */
 public class Controller implements ActionListener {
 
-	public VentanaBienvenido ventana_bienvenido;
-	public Quatriqui quatriqui;
-	public VentanaHistorial ventana_historial;
-	public Registro registro;
-	public JuegoCuatriqui juego_cuatriqui;
+	public VentanaBienvenido ventana_bienvenido; // Atributo que renonmbra la clase VentanaBienvenido
+	public Quatriqui quatriqui;// Atributoque renombra la clase Quatriqui
+	public VentanaHistorial ventana_historial;// Atributo que renombra la clase VentanaHistorial
+	public Registro registro;// Atributo que renombra la clase Registro
+	public Registro2 registro2;// Atributo que renombra la clase Registro2
+	public JuegoCuatriqui juego_cuatriqui;// Atributo que renombra la clase JuegoCuatriqui
 
-	public String jugador1;
-	public String jugador2;
-	public String turno;
-	public Thread hilo;
-	public boolean estado = true;
-	public int min, seg ,hr;
-	public String tiempo;
+	public String jugador1;// Atributo de tipo String que  guarda el nombre del Jugador 1
+	public String jugador2;// Atributo de tipo String que  guarda el nombre del Jugador 2
+	public String turno;// Atributo de tipo String que alterna los turnos de los jugadores
+	public Thread hilo;// Atributo de tipo Thread que contiene el cronometro
+	public boolean estado = true;// Atributo de tipo boolean que cambia el estado del cronometro
+	public int min, seg ,hr;// atributos de tipo int que contienen las horas, minutos, segundos del cronometro
+	public String tiempo;// Atributos de tipo String que contiene el tiempo del Cronometro
+	/**
+	 * Constructor de la clase controller que inicializa las clases importadas y los oyentes
+	 */
 	public Controller() {
 		ventana_bienvenido = new VentanaBienvenido();
 		ventana_historial = new VentanaHistorial();
 		quatriqui = new Quatriqui();
 		registro = new Registro();
+		registro2 = new Registro2();
 		juego_cuatriqui = new JuegoCuatriqui();
 
 		jugador1 = quatriqui.getJugador1();
@@ -47,7 +59,9 @@ public class Controller implements ActionListener {
 		asignarOyentes();
 
 	}
-
+/**
+ * Metodo de tipo Void que inicia el Hilo del cronometro
+ */
 	public void Hilo() {
 
 		hilo = new Thread() {
@@ -81,7 +95,10 @@ public class Controller implements ActionListener {
 		hilo.start();
 	
 }
-
+/**
+ * Metodo de tipo String que realiza el cambio de turno 
+ * @return turno
+ */
 	public String jugadores() {
 
 		if (turno.equals(jugador1)) {
@@ -127,6 +144,8 @@ public class Controller implements ActionListener {
 		quatriqui.getPanelCuatriqui().getB14().setVisible(true);
 		quatriqui.getPanelCuatriqui().getB15().setVisible(true);
 		quatriqui.getPanelCuatriqui().getB16().setVisible(true);
+		
+		//quatriqui.getPregistro().getArea_texto().setText("");
 
 		hilo.stop();
 		hr = 0;
@@ -426,7 +445,11 @@ public class Controller implements ActionListener {
 			Hilo();
 
 		}
-	
+		
+		
+		String texto2 = registro2.leerRegistro();
+		texto2 = quatriqui.getPregistro().getArea_texto().getText();
+		
 		String texto = registro.leerRegistro();
 		texto = quatriqui.getPregistro().getArea_texto().getText();
 
@@ -596,12 +619,17 @@ public class Controller implements ActionListener {
 		}
 
 		if ((e.getActionCommand().equals("REMATCH"))) {
+
 			registro.actualizarRegistro(texto);
 			hilo.stop();
 			hr = 0;
 			min= 0;
 			seg= 0;
 			Hilo();
+
+
+			registro2.actualizarRegistro(texto);
+			quatriqui.getPregistro().getArea_texto().setText("");
 
 			
 		}
