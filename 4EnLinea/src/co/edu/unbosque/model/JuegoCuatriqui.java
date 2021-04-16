@@ -1,5 +1,4 @@
 package co.edu.unbosque.model;
-import co.edu.unbosque.view.PanelCuatriqui;
 /**
  * Clase JuegoCuatriqui donde da los turnos para el juego
  * @author Jinetes del apocalipsis
