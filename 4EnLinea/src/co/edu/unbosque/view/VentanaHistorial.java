@@ -8,6 +8,8 @@ import javax.swing.JFrame;
 
 public class VentanaHistorial extends JFrame{
 	
+	private PanelHistorial panel_historial;
+	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
 	private int alto;// Atributo que contiene el alto de la pantalla
 	
@@ -36,12 +38,17 @@ public class VentanaHistorial extends JFrame{
 	public void Interfaz() {
 		bt_Regresar = new JButton("Regresar");
 		bt_Regresar.setActionCommand("MENU");
-		bt_Regresar.setBounds(50, 400, 100, 30);
+		bt_Regresar.setBounds(20, 420, 100, 30);
 		bt_Regresar.setVisible(true);
 		add(bt_Regresar);
 		
 		this.getContentPane().setBackground(new Color(251,201,40));
 		
+		panel_historial = new PanelHistorial();
+		panel_historial.setBounds(0, 0, 430, 410);
+		panel_historial.setOpaque(false);
+		panel_historial.setVisible(true);
+		add(panel_historial);		
 	}
 
 	public JButton getBt_Regresar() {

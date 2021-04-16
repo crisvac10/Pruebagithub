@@ -68,6 +68,7 @@ public class Controller implements ActionListener {
 		& quatriqui.getPanelCuatriqui().getLb4().getText()== "X"
 		) {
 			System.out.println("X ganó ");
+			juego_cuatriqui.setPuntajeJ1(Integer.parseInt(juego_cuatriqui.getPuntajeJ1())+1);
 		}else if (quatriqui.getPanelCuatriqui().getLb5().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb6().getText()== "X"
 				& quatriqui.getPanelCuatriqui().getLb7().getText()== "X"
@@ -263,7 +264,6 @@ public class Controller implements ActionListener {
 				
 				
 			}if((e.getActionCommand().equals("DOS"))) {
-				quatriqui.getPanelCuatriqui().getLb2().setText(juego_cuatriqui.turnos());
 				
 				quatriqui.getPanelCuatriqui().getLb2().setText(juego_cuatriqui.turnos());
 				quatriqui.getPanelCuatriqui().getLb2().setVisible(true);
