@@ -644,9 +644,10 @@ public class Controller implements ActionListener {
 			// VENTANA HISTORIAL
 		}
 		if ((e.getActionCommand().equals("HISTORIAL"))) {
-
+			Hilo();
 			ventana_bienvenido.setVisible(false);
 			ventana_historial.setVisible(true);
+			hilo.stop();
 		}
 
 	}
