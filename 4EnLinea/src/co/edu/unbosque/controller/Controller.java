@@ -53,6 +53,7 @@ public class Controller implements ActionListener {
 		jugador2 = quatriqui.getJugador2();
 		turno = jugador1;
 		asignarOyentes();
+	
 
 	}
 /**
@@ -642,7 +643,7 @@ public class Controller implements ActionListener {
 			// VENTANA HISTORIAL
 		}
 		if ((e.getActionCommand().equals("HISTORIAL"))) {
-			
+			texto = registro.leerRegistro();
 			ventana_historial.getPanel_historial().getArea_texto().setText(texto);
 			
 			Hilo();
