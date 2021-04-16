@@ -95,9 +95,9 @@ public class PanelRegistro extends JPanel {
 		lEmpate.setBounds(100,330,60, 20);
 		add(lEmpate);
 		
-		btrematch = new JButton("Rematch");
+		btrematch = new JButton("Guardar registro y reiniciar");
 		btrematch.setActionCommand("REMATCH");
-		btrematch.setBounds(120, 500, 120, 25);
+		btrematch.setBounds(85, 500, 200, 25);
 		btrematch.setVisible(true);
 		add(btrematch);
 	}

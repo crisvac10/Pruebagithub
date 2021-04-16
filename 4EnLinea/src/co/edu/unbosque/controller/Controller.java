@@ -12,7 +12,6 @@ import javax.swing.JOptionPane;
 
 import co.edu.unbosque.model.JuegoCuatriqui;
 import co.edu.unbosque.model.Registro;
-import co.edu.unbosque.model.Registro2;
 import co.edu.unbosque.view.PanelCuatriqui;
 
 import co.edu.unbosque.view.PanelRegistro;
@@ -32,7 +31,6 @@ public class Controller implements ActionListener {
 	public Quatriqui quatriqui;// Atributoque renombra la clase Quatriqui
 	public VentanaHistorial ventana_historial;// Atributo que renombra la clase VentanaHistorial
 	public Registro registro;// Atributo que renombra la clase Registro
-	public Registro2 registro2;// Atributo que renombra la clase Registro2
 	public JuegoCuatriqui juego_cuatriqui;// Atributo que renombra la clase JuegoCuatriqui
 
 	public String jugador1;// Atributo de tipo String que  guarda el nombre del Jugador 1
@@ -50,7 +48,6 @@ public class Controller implements ActionListener {
 		ventana_historial = new VentanaHistorial();
 		quatriqui = new Quatriqui();
 		registro = new Registro();
-		registro2 = new Registro2();
 		juego_cuatriqui = new JuegoCuatriqui();
 
 		jugador1 = quatriqui.getJugador1();
@@ -171,6 +168,7 @@ public class Controller implements ActionListener {
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
 			Hilo();
+			
 
 
 		} else if (quatriqui.getPanelCuatriqui().getLb5().getText() == "X"
@@ -453,10 +451,7 @@ public class Controller implements ActionListener {
 			Hilo();
 
 		}
-		
-		
-		String texto2 = registro2.leerRegistro();
-		texto2 = quatriqui.getPregistro().getArea_texto().getText();
+	
 		
 		String texto = registro.leerRegistro();
 		texto = quatriqui.getPregistro().getArea_texto().getText();
@@ -627,20 +622,15 @@ public class Controller implements ActionListener {
 		}
 
 		if ((e.getActionCommand().equals("REMATCH"))) {
-
+			reiniciarTodo();
 			registro.actualizarRegistro(texto);
 			hilo.stop();
 			hr = 0;
 			min= 0;
 			seg= 0;
 			Hilo();
-
 			
-			texto = registro.actualizarRegistro(texto2);
-
-			 registro2.actualizarRegistro(texto);
-			quatriqui.getPregistro().getArea_texto().setText("");
-
+			JOptionPane.showMessageDialog(quatriqui, "Se reiniciará la partida, el tiempo \ny se guardarán las jugadas en el historial");
 			
 		}
 
