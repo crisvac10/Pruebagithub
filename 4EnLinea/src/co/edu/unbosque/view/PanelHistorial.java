@@ -27,6 +27,7 @@ public class PanelHistorial extends JPanel{
 		area_texto.setBounds(20, 20, 400, 400);
 		JScrollPane panel = new JScrollPane(area_texto);
 		panel.setBounds(20, 20, 400, 380);
+		area_texto.setEditable(false);
 		add(panel);
 	}
 
