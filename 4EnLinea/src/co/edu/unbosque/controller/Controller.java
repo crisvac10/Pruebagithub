@@ -109,7 +109,9 @@ public class Controller implements ActionListener {
 		}
 		return turno;
 	}
-
+/**
+ * Metodo de tipo void que reinicia el juego
+ */
 	public void reiniciarTodo() {
 		quatriqui.getPanelCuatriqui().getLb1().setText("");
 		quatriqui.getPanelCuatriqui().getLb2().setText("");
@@ -154,7 +156,9 @@ public class Controller implements ActionListener {
 	
 
 	}
-
+/**
+ * Metodo de tipo void que comprueba si un jugador ha ganado
+ */
 	public void comprobar() {
 
 		if (quatriqui.getPanelCuatriqui().getLb1().getText() == "X"
@@ -405,7 +409,9 @@ public class Controller implements ActionListener {
 			Hilo();
 		}
 	}
-
+/**
+ * Metodo de tipo void que asigna losoyentes a los distintos botones
+ */
 	public void asignarOyentes() {
 		ventana_bienvenido.getBt_Historial().addActionListener(this);
 		ventana_bienvenido.getBt_Jugar().addActionListener(this);
@@ -431,7 +437,9 @@ public class Controller implements ActionListener {
 		quatriqui.getPregistro().getBtrematch().addActionListener(this);
 
 	}
-
+/**
+ * Metodo de tipo void que activa las acciones de los botones
+ */
 	public void actionPerformed(ActionEvent e) {
 
 		// VENTANA QUATRIQUI
@@ -627,8 +635,10 @@ public class Controller implements ActionListener {
 			seg= 0;
 			Hilo();
 
+			
+			texto = registro.actualizarRegistro(texto2);
 
-			registro2.actualizarRegistro(texto);
+			 registro2.actualizarRegistro(texto);
 			quatriqui.getPregistro().getArea_texto().setText("");
 
 			

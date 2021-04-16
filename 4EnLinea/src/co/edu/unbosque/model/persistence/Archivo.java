@@ -93,7 +93,7 @@ public class Archivo {
 			return "Linea ingresada con exito";
 		}catch(IOException e) {
 			return "No se pudo escribir en el archivo";
-		}
+		} 
 		
 	}
 	
