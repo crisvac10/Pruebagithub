@@ -3,6 +3,8 @@ package co.edu.unbosque.view;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.List;
+import java.awt.Point;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -55,6 +57,7 @@ public class PanelRegistro extends JPanel {
 		area_texto = new JTextArea();
 		area_texto.setBounds(10, 10, 400, 600);
 		JScrollPane panel = new JScrollPane(area_texto);
+		panel.getVerticalScrollBar().setValue(0);
 		panel.setBounds(2, 20, 360, 200);
 		area_texto.setEditable(false);
 		add(panel);
