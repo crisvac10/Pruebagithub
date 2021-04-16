@@ -51,6 +51,9 @@ public class Archivo {
 		}
 	}
 	
+	
+		
+	
 	public String leerArchivo2() {
 		FileInputStream fis;
 		InputStreamReader isr;

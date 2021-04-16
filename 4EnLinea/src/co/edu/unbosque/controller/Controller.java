@@ -606,7 +606,7 @@ public class Controller implements ActionListener {
 		}
 
 		if ((e.getActionCommand().equals("REMATCH"))) {
-			registro.actualizarRegistro(texto);
+			registro2.actualizarRegistro(texto);
 			quatriqui.getPregistro().getArea_texto().setText("");
 			
 		}

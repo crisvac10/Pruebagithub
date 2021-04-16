@@ -21,6 +21,7 @@ public class Registro2 {
 		texto = arch.leerArchivo();
 		return texto;
 	}
+
 	
 	public String actualizarRegistro(String frase) {
 		return arch.escribirArchivo(frase);
