@@ -12,23 +12,31 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
-
+/**
+ * Clase PanelRegistro que extiende de JPanel, contiene el puntajes, nombres y movimientos de los jugadores 
+ * @author Jinetes del apocalipsis
+ *
+ */
 public class PanelRegistro extends JPanel {
 
-	private JTextArea area_texto;
-	private JLabel lbjugador1;
-	private JLabel nombjugador1;
-	private JLabel lbjugador2;
-	private JLabel nombjugador2;
-	private JLabel puntajeJ1;
-	private JLabel puntajeJ2;
-	private JLabel empates;
-	private JTextArea lPuntajeJ1;
-	private JTextArea lPuntajeJ2;
-	private JTextArea lEmpate;
-	private JButton btrematch;
+	private JTextArea area_texto;// Atributo de tipo JTextArea con el cual implementamos un area de texto
+	private JLabel lbjugador1;// Atributo tipo label para eljugador 1
+	private JLabel nombjugador1;// Atributo que contiene el nombre del jugador1  
+	private JLabel lbjugador2;// Atributo tipo label para el jugador 2
+	private JLabel nombjugador2;// Atributo que contiene el nombre del jugador 2
+	private JLabel puntajeJ1;// Atributo en el que se encuentra el puntaje de partidas ganadas del Jugador 1
+	private JLabel puntajeJ2;// Atributo en el que se encuentra el puntaje de partidas ganadas del Jugador 2
+	private JLabel empates;//// Atributo en el que se encuentra las partidas empatadas
+	private JTextArea lPuntajeJ1;// Atributo en el que se modifica el puntaje de partidas ganadas del Jugador 1
+	private JTextArea lPuntajeJ2;// Atributo en el que se modifica el puntaje de partidas ganadas del Jugador 2
+	private JTextArea lEmpate;// Atributo en el que se modifica el puntaje de partidas empatadas
+	private JButton btrematch;// Atributo para el boton de volver a jugar
 	
-
+/**
+ * Constructor de la clase PanelRegistro que inicializa los metodos para funcionar
+ * @param j1 Jugador 1 renombrado
+ * @param j2 Jugador 2 renombrado
+ */
 	public PanelRegistro(String j1, String j2) {
 
 		setBorder(new TitledBorder("Registro de jugadas"));
@@ -39,7 +47,11 @@ public class PanelRegistro extends JPanel {
 
 	}
 
-
+/**
+ * Metodo que inicializa los atributos, les asigna sudestino y los agrega.
+ * @param j1 Jugador 1 renombrado
+ * @param j2 Jugador 2 renombrado
+ */
 	private void funcionar(String j1, String j2) {
 
 		area_texto = new JTextArea();
@@ -91,50 +103,80 @@ public class PanelRegistro extends JPanel {
 		add(btrematch);
 	}
 
-	
+	/**
+	 * Metodo que permite acceder al atributo Area_texto
+	 * @return area_texto
+	 */
 	public JTextArea getArea_texto() {
 		return area_texto;
 	}
-
+	/**
+	 * Metodo que permite modificar el atributo area_texto
+	 * @param area_texto to set area_texto
+	 */
 	public void setArea_texto(JTextArea area_texto) {
 		this.area_texto = area_texto;
 	}
-
+	/**
+	 * Metodo que permite acceder al atributo Btrematch
+	 * @return btrematch
+	 */
 
 	public JButton getBtrematch() {
 		return btrematch;
 	}
-
+	/**
+	 * Metodo que permite modificar el atributo Btrematch
+	 * @param btrematch to set Btrematch
+	 */
 
 	public void setBtrematch(JButton btrematch) {
 		this.btrematch = btrematch;
 	}
-
+	/**
+	 * Metodo que permite acceder al atributo lPuntajeJ1
+	 * @return lPuntajeJ1
+	 */
 
 	public JTextArea getlPuntajeJ1() {
 		return lPuntajeJ1;
 	}
-
+	/**
+	 * Metodo que permite modificar el atributo lPuntajeJ1
+	 * @param lPuntajeJ1 to set lPuntajeJ1
+	 */
 
 	public void setlPuntajeJ1(JTextArea string) {
 		this.lPuntajeJ1 = string;
 	}
-
+	/**
+	 * Metodo que permite acceder al atributo lPuntajeJ2
+	 * @return lPuntajeJ2
+	 */
 
 	public JTextArea getlPuntajeJ2() {
 		return lPuntajeJ2;
 	}
-
+	/**
+	 * Metodo que permite modificar el atributo lPuntajeJ2
+	 * @param lPuntajeJ2 to set lPuntajeJ2
+	 */
 
 	public void setlPuntajeJ2(JTextArea lPuntajeJ2) {
 		this.lPuntajeJ2 = lPuntajeJ2;
 	}
 
-
+	/**
+	 * Metodo que permite acceder al atributo lEmpate
+	 * @return lEmpate
+	 */
 	public JTextArea getlEmpate() {
 		return lEmpate;
 	}
-
+/**
+ * Metodo que permite modificar el atributo lEmpate
+ * @param lEmpate to set lEmpate
+ */
 
 	public void setlEmpate(JTextArea lEmpate) {
 		this.lEmpate = lEmpate;

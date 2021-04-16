@@ -4,7 +4,7 @@ import java.io.File;
 
 import co.edu.unbosque.model.persistence.Archivo;
 
-public class Registro2 {
+public class Registro2 { 
 
 	private String texto;
 	Archivo arch;

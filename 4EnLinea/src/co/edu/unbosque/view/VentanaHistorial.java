@@ -60,7 +60,7 @@ public class VentanaHistorial extends JFrame{
 	}
 /**
  * metodo que permite acceder al atributo Bt_Regresar
- * @return bt_Regresar
+ * @return bt_Regresar 
  */
 	public JButton getBt_Regresar() {
 		return bt_Regresar;

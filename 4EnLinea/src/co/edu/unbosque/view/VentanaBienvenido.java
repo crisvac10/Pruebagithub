@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 /**
  * Clase VentanaBienvenidos que contiene la interfaz de usuario principal
- * @author Jinetes del apocalipsis
+ * @author Jinetes del apocalipsis 
  *
  */
 public class VentanaBienvenido extends JFrame {
