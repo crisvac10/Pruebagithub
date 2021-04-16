@@ -634,6 +634,8 @@ public class Controller implements ActionListener {
 		}
 
 		if ((e.getActionCommand().equals("MENU"))) {
+
+			registro.actualizarRegistro(texto);
 			ventana_bienvenido.setVisible(true);
 			quatriqui.setVisible(false);
 			ventana_historial.setVisible(false);
@@ -643,7 +645,7 @@ public class Controller implements ActionListener {
 			// VENTANA HISTORIAL
 		}
 		if ((e.getActionCommand().equals("HISTORIAL"))) {
-			texto = registro.leerRegistro();
+		
 			ventana_historial.getPanel_historial().getArea_texto().setText(texto);
 			
 			Hilo();
