@@ -21,8 +21,7 @@ public class PanelRegistro extends JPanel {
 
 	private JTextArea area_texto;// Atributo de tipo JTextArea con el cual implementamos un area de texto
 	private JLabel lbjugador1;// Atributo tipo label para eljugador 1
-	private JLabel nombjugador1;// Atributo que contiene el nombre del jugador1  
-	private JLabel lbjugador2;// Atributo tipo label para el jugador 2
+	private JLabel nombjugador1;// Atributo que contiene el nombre del jugador1 
 	private JLabel nombjugador2;// Atributo que contiene el nombre del jugador 2
 	private JLabel puntajeJ1;// Atributo en el que se encuentra el puntaje de partidas ganadas del Jugador 1
 	private JLabel puntajeJ2;// Atributo en el que se encuentra el puntaje de partidas ganadas del Jugador 2
