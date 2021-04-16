@@ -7,7 +7,7 @@ import co.edu.unbosque.model.persistence.Archivo;
  * Clase Registro que contiene los archivos de texto guardados del juego
  * @author Jinetes del apocalipsis
  *
- */
+ */  
 public class Registro {
 	
 	private String texto;// Atributo de tipo String que guarda el historial

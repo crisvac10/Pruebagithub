@@ -1,6 +1,6 @@
 package co.edu.unbosque.controller;
 /**
- * Clase Principal Main
+ * Clase Principal Main 
  * @author Jinetes del apocalipsis
  * @version 5.0
  * @serial 2021

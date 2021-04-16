@@ -6,23 +6,36 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+/**
+ * Clase Archivo persistencia del programa 
+ * @author Jinetes del apocalipsis
+ *
+ */
 public class Archivo {
 	
-	private File f;
-	private File f2;
-	
+	private File f;//Atributo de tipo File que contiene un archivo de texto 1
+	private File f2;// Atributo de tipo File que contiene un archivo de texto 2
+	/**
+	 * Constructor de la clase Archivo que inicializa los archivos registro y registro2
+	 */
 	public Archivo() {
 		f = new File("historial\\registro.txt");
 		f2 = new File("historial\\registro2.txt");
 	}
-	
+	/**
+	 * Constructor de la clase Archivo  que crea dos metodos
+	 * @param f
+	 * @param f2
+	 */
 	public Archivo(File f, File f2) {
 		this.f = f;
 		this.f2 = f2;
 	}
 	
-	
+	/**
+	 * Metodo de tipo String que permite leer el archivo y lo guarda en una memoria 
+	 * @return String
+	 */
 	public String leerArchivo() {
 		FileInputStream fis;
 		InputStreamReader isr;
@@ -51,7 +64,10 @@ public class Archivo {
 		}
 	}
 	
-	
+	/**
+	 * Metodoque que permite leer el el archivo2 y lo guarda en una memoria buffer 
+	 * @return String
+	 */
 		
 	
 	public String leerArchivo2() {
@@ -81,7 +97,11 @@ public class Archivo {
 			return "No se pudo leer el archivo";
 		}
 	}
-	
+/**
+ * Metodo que permite ingresar texto dentro de la memoria buffer	
+ * @param frase linea de texto
+ * @return String
+ */
 	public String escribirArchivo(String frase) {
 		try {
 			InputStreamReader isr = new InputStreamReader(System.in);
@@ -96,7 +116,11 @@ public class Archivo {
 		} 
 		
 	}
-	
+	/**
+	 * Metodo que permite ingresar texto dentro de la memoria buffer del archivo2	
+	 * @param frase linea de texto
+	 * @return String
+	 */	
 	public String escribirArchivo2(String frase) {
 		try {
 			InputStreamReader isr = new InputStreamReader(System.in);
@@ -113,3 +137,4 @@ public class Archivo {
 	}
 
 }
+ 

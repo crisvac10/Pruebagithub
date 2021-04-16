@@ -340,7 +340,7 @@ public class Controller implements ActionListener {
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
 			Hilo();
-
+ 
 		} else if (quatriqui.getPanelCuatriqui().getLb3().getText() == "O"
 				& quatriqui.getPanelCuatriqui().getLb7().getText() == "O"
 				& quatriqui.getPanelCuatriqui().getLb11().getText() == "O"

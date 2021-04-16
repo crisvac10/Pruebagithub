@@ -18,7 +18,7 @@ import javax.swing.border.TitledBorder;
  *
  */
 public class PanelRegistro extends JPanel {
-
+ 
 	private JTextArea area_texto;// Atributo de tipo JTextArea con el cual implementamos un area de texto
 	private JLabel lbjugador1;// Atributo tipo label para eljugador 1
 	private JLabel nombjugador1;// Atributo que contiene el nombre del jugador1 

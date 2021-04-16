@@ -6,7 +6,7 @@ import co.edu.unbosque.model.persistence.Archivo;
 /**
  * Clase Registro2 que contiene los archivos de texto guardados del juego
  * @author Jinetes del apocalipsis
- *
+ * 
  */
 public class Registro2 { 
 
