@@ -34,7 +34,6 @@ public class Controller implements ActionListener {
 	public boolean estado = true;
 	public int min, seg ,hr;
 	public String tiempo;
-
 	public Controller() {
 		ventana_bienvenido = new VentanaBienvenido();
 		ventana_historial = new VentanaHistorial();
@@ -49,40 +48,40 @@ public class Controller implements ActionListener {
 
 	}
 
-public void Hilo() {
+	public void Hilo() {
 
+		hilo = new Thread() {
+			public void run() {
+				for (;;) {
+					if (estado == true) {
+						try {
+							sleep(1000);
+							if (seg >= 60) {
+								seg = 0;
+								min++;
 
-	hilo = new Thread () {
-		public void run() {
-			for (; ;) {
-				if (estado == true) {
-					try {
-						sleep(1000);
-						if(seg >= 60 ) {
-							seg = 0;
-							min++;
-						
-						} if (min >= 60) {
-							seg = 0;
-							min = 0;
-							hr++;
+							}
+							if (min >= 60) {
+								seg = 0;
+								min = 0;
+								hr++;
+							}
+							quatriqui.getCronometro().setText(hr + " : " + min + " : " + seg);
+							seg++;
+						} catch (Exception e) {
+
 						}
-						quatriqui.getCronometro().setText(hr + " : " + min + " : " + seg);
-						seg++;
-					}catch(Exception e) {
-						
+					} else {
+						break;
 					}
-			    }else {
-			    	break;
-			    }
-		}
-	}
+				}
+			}
+
+		};
+		hilo.start();
 	
-	
-	}; 
-	hilo.start();
 }
-	
+
 	public String jugadores() {
 
 		if (turno.equals(jugador1)) {
@@ -128,7 +127,7 @@ public void Hilo() {
 		quatriqui.getPanelCuatriqui().getB14().setVisible(true);
 		quatriqui.getPanelCuatriqui().getB15().setVisible(true);
 		quatriqui.getPanelCuatriqui().getB16().setVisible(true);
-		
+
 		hilo.stop();
 		hr = 0;
 		min = 0;
@@ -148,6 +147,7 @@ public void Hilo() {
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
 			Hilo();
+
 
 		} else if (quatriqui.getPanelCuatriqui().getLb5().getText() == "X"
 				& quatriqui.getPanelCuatriqui().getLb6().getText() == "X"
@@ -467,8 +467,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb4().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB4().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb4 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb4 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -477,8 +477,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb5().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB5().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb5 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb5 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -487,8 +487,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb6().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB6().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb6 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb6 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -497,8 +497,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb7().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB7().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb7 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb7 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -507,8 +507,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb8().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB8().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb8 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb8 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -517,8 +517,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb9().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB9().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb9 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb9 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -527,8 +527,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb10().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB10().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb10 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb10 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -537,8 +537,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb11().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB11().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb11 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb11 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -547,8 +547,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb12().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB12().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb12 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb12 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -557,8 +557,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb13().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB13().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb13 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb13 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -567,8 +567,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb14().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB14().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb14 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb14 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -577,8 +577,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb15().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB15().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb15 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb15 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 
@@ -587,8 +587,8 @@ public void Hilo() {
 			quatriqui.getPanelCuatriqui().getLb16().setVisible(true);
 			quatriqui.getPanelCuatriqui().getB16().setVisible(false);
 			jugadores();
-			quatriqui.getPregistro().getArea_texto().setText("\n" + jugadores().toString() + 
-					" su jugada fue Lb16 Tiempo: "+hr + " : "+ min+ " : "+seg+ texto);
+			quatriqui.getPregistro().getArea_texto().setText(texto+"\n" + jugadores().toString() + 
+					" su jugada fue Lb16 Tiempo: "+hr + " : "+ min+ " : "+seg);
 			jugadores();
 			comprobar();
 

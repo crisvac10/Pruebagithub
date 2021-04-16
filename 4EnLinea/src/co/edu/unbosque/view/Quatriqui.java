@@ -12,25 +12,30 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
-
+/**
+ * Clase Quatriqui de tipo JFrame que contiene la ventana y los paneles de el juego
+ * @author Jinetes del apocalipsis
+ *
+ */
 public class Quatriqui extends JFrame {
 	
 	private ImageIcon ImagenCuatriqui;// imagen de fondo de la ventana Bienvenido
 	private JLabel quatriqui; // Atributo Jlabel que contiene la imagen de fondo
-	private PanelRegistro pregistro;
-	private PanelCuatriqui panel_cuatriqui;
+	private PanelRegistro pregistro;// Atributo Pregistro que renombra al PanelRegistro	
+	private PanelCuatriqui panel_cuatriqui;// Atributo panel_cuatriqui que renombra al PanelCuatriqui
 	
-	private JButton bt_Menu;
+	private JButton bt_Menu;// Atributo JButton que nombra un boton
 	
-	private String Jugador1;
-	private String Jugador2;
-	private JLabel Cronometro;
+	private String Jugador1;// Atributo tipo String que nombra al jugador 1
+	private String Jugador2;//Atributo tipo String que nombra al jugador 2
+	private JLabel Cronometro;// Atributo tipo JLabel que contiene la impresion del cronometro
 	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
 	private int alto;// Atributo que contiene el alto de la pantalla
 	
-	
-
+	/**
+	 * Constructor de la clase Quatriqui que inicializa los metodos y asigna las dimensiones de la ventana 
+	 */
 	public Quatriqui() {
 		
 		setTitle("Cuatriqui");
@@ -58,7 +63,9 @@ public class Quatriqui extends JFrame {
 	}
 	
 
-	
+	/**
+	 * Metodo que inicializa los Atributos dentro del panel y les asigna sus posiciones.
+	 */
 	public void InterfazQuatriqui() {
 		
 		Cronometro = new JLabel("");
@@ -95,56 +102,94 @@ public class Quatriqui extends JFrame {
 	}
 
 
-
+/**
+ * Metodo que permite acceder al atributo Bt_Menu 
+ * @return bt_menu
+ */
 	public JButton getBt_Menu() {
 		return bt_Menu;
 	}
-
+/**
+ * Metodo que permite modificar el atributo Bt_Menu
+ * @param bt_Menu to set Bt_Menu
+ */
 	public void setBt_Menu(JButton bt_Menu) {
 		this.bt_Menu = bt_Menu;
 	}
+	/**
+	 * Metodo que permite acceder al atributo Pregistro 
+	 * @return pregistro
+	 */
 
 	public PanelRegistro getPregistro() {
 		return pregistro;
 	}
-
+/**
+ * Metodo que permite acceder al atributo Pregistro
+ * @param pregistro to set Pregistro
+ */
 	public void setPregistro(PanelRegistro pregistro) {
 		this.pregistro = pregistro;
 	}
-
+	/**
+	 * Metodo que permite acceder al atributo PanelCuatriqui 
+	 * @return PanelCuatriqui
+	 */
 
 	public PanelCuatriqui getPanelCuatriqui() {
 		return panel_cuatriqui;
 	}
-
+/**
+ * Metodo que permite modificar el atributo PanelCuatriqui
+ * @param panelCuatriqui to set PanelCuatriqui
+ */
 
 	public void setPanelCuatriqui(PanelCuatriqui panelCuatriqui) {
 		panel_cuatriqui = panelCuatriqui;
 	}
 
-
+/**
+ * Metodo que  permite acceder al atributo Jugador1 
+ * @return Jugador1
+ */
 	public String getJugador1() {
 		return Jugador1;
 	}
-
+/**
+ * Metodo que permite modificar al atributo Jugador1
+ * @param jugador1
+ */
 
 	public void setJugador1(String jugador1) {
 		Jugador1 = jugador1;
 	}
 
-
+	/**
+	 * Metodo que me permite acceder al atributo Jugador2 
+	 * @return Jugador2
+	 */
 	public String getJugador2() {
 		return Jugador2;
 	}
-
+	/**
+	 * Metodo que permite modificar al atributo Jugador2
+	 * @param jugador2
+	 */
 
 	public void setJugador2(String jugador2) {
 		Jugador2 = jugador2;
 	}
-
+/**
+ * Metodo que permite acceder al metodo Cronometro
+ * @return Cronometro
+ */
 	public JLabel getCronometro() {
 		return Cronometro;
 	}
+	/**
+	 * Metodo que permite modificar el atributo Cronometro
+	 * @param cronometro to set Cronometro
+	 */
 
 	public void setCronometro(JLabel cronometro) {
 		Cronometro = cronometro;

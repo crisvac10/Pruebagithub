@@ -5,17 +5,23 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
+/**
+ * Clase VentanaHistorial que extiende de JFrame, aqui es donde se encuentra el historial delas partidas
+ * @author Jinetes del apocalipsis
+ *
+ */
 public class VentanaHistorial extends JFrame{
 	
-	private PanelHistorial panel_historial;
+	private PanelHistorial panel_historial;// Atributo Panel_historial querenombran la clase PanelHistorial.
 	
 	private int ancho;// Atributo que contiene el ancho de la pantalla
 	private int alto;// Atributo que contiene el alto de la pantalla
 	
 	
-	private JButton bt_Regresar;
-	
+	private JButton bt_Regresar;// Atributo que contiene el boton para regresar a la ventana principal 
+	/**
+	 * Constructor de la clase VentanaHistorial  que inicializa losmetodos y asignas las dimensiones de la ventana
+	 */
 	public VentanaHistorial (){
 		
 		setTitle("ventana historial");
@@ -34,7 +40,9 @@ public class VentanaHistorial extends JFrame{
 
 
 	}
-	
+	/**
+	 * metodo que inicializa el panel y el boton regresar
+	 */
 	public void Interfaz() {
 		bt_Regresar = new JButton("Regresar");
 		bt_Regresar.setActionCommand("MENU");
@@ -50,11 +58,17 @@ public class VentanaHistorial extends JFrame{
 		panel_historial.setVisible(true);
 		add(panel_historial);		
 	}
-
+/**
+ * metodo que permite acceder al atributo Bt_Regresar
+ * @return bt_Regresar
+ */
 	public JButton getBt_Regresar() {
 		return bt_Regresar;
 	}
-
+/**
+ * Metodo que permite modificar el atributo Bt_Regresar 
+ * @param bt_Regresar
+ */
 	public void setBt_Regresar(JButton bt_Regresar) {
 		this.bt_Regresar = bt_Regresar;
 	}
