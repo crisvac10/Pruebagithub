@@ -32,7 +32,7 @@ public class Controller implements ActionListener {
 	public String turno;
 	public Thread hilo;
 	public boolean estado = true;
-	public int min, seg ,hr;
+	public int min, seg, hr;
 
 	public Controller() {
 		ventana_bienvenido = new VentanaBienvenido();
@@ -48,39 +48,38 @@ public class Controller implements ActionListener {
 
 	}
 
-public void Hilo() {
+	public void Hilo() {
 
+		hilo = new Thread() {
+			public void run() {
+				for (;;) {
+					if (estado == true) {
+						try {
+							sleep(1000);
+							if (seg >= 60) {
+								seg = 0;
+								min++;
 
-	hilo = new Thread () {
-		public void run() {
-			for (; ;) {
-				if (estado == true) {
-					try {
-						sleep(1000);
-						if(seg >= 60 ) {
-							seg = 0;
-							min++;
-						
-						} if (min >= 60) {
-							seg = 0;
-							min = 0;
-							hr++;
+							}
+							if (min >= 60) {
+								seg = 0;
+								min = 0;
+								hr++;
+							}
+							quatriqui.getCronometro().setText(hr + " : " + min + " : " + seg);
+							seg++;
+						} catch (Exception e) {
+
 						}
-						quatriqui.getCronometro().setText(hr + " : " + min + " : " + seg);
-						seg++;
-					}catch(Exception e) {
-						
+					} else {
+						break;
 					}
-			    }else {
-			    	break;
-			    }
-		}
+				}
+			}
+
+		};
+		hilo.start();
 	}
-	
-	
-	}; 
-	hilo.start();
-}
 
 	public String jugadores() {
 
@@ -127,7 +126,7 @@ public void Hilo() {
 		quatriqui.getPanelCuatriqui().getB14().setVisible(true);
 		quatriqui.getPanelCuatriqui().getB15().setVisible(true);
 		quatriqui.getPanelCuatriqui().getB16().setVisible(true);
-		
+
 		hilo.stop();
 		hr = 0;
 		min = 0;
@@ -146,6 +145,7 @@ public void Hilo() {
 			reiniciarTodo();
 			JOptionPane.showMessageDialog(quatriqui,
 					"Ha ganado el jugador: " + jugadores() + "\nAhora comienza el jugador: " + jugadores());
+			
 
 		} else if (quatriqui.getPanelCuatriqui().getLb5().getText() == "X"
 				& quatriqui.getPanelCuatriqui().getLb6().getText() == "X"
