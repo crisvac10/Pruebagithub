@@ -13,7 +13,7 @@ public class JuegoCuatriqui {
 	private int empate=0;// Atributo tipo int que contiene el puntaje de empatados
 	
 	/**
-	 * Constructor de la clase JuegoCuatriqui 
+	 * Constructor de la clase JuegoCuatriqui  
 	 */
 	public JuegoCuatriqui() {
 		

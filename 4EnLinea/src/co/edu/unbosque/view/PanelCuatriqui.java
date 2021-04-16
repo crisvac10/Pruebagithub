@@ -11,7 +11,7 @@ import javax.swing.border.TitledBorder;
 /**
  * Clase PanelCuatriqui que extiendede JPanel, contiene los JLabel y Botones para el juego 
  * @author Jinetes del apocalipsis
- *
+ * 
  */
 public class PanelCuatriqui extends JPanel{
 	

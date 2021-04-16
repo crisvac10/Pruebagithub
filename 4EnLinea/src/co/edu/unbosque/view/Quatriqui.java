@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 /**
  * Clase Quatriqui de tipo JFrame que contiene la ventana y los paneles de el juego
- * @author Jinetes del apocalipsis
+ * @author Jinetes del apocalipsis 
  *
  */
 public class Quatriqui extends JFrame {
