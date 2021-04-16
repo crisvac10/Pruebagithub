@@ -22,8 +22,8 @@ public class Registro {
 	 * Constructor de la clase Registro 
 	 * @param f Archivo1
 	 */
-	public Registro(File f) {
-		arch = new Archivo(f, f);
+	public Registro(File f, File f2) {
+		arch = new Archivo(f, f2);
 	}
 	/**
 	 * Metodo de tipo String que permite leer el archivo  
@@ -35,11 +35,27 @@ public class Registro {
 	}
 	
 	/**
+	 * Metodo de tipo String que permite leer el archivo  
+	 * @return texto
+	 */
+	public String leerRegistro2() {
+		texto = arch.leerArchivo();
+		return texto;
+	}
+	/**
 	 * Metodo de tipo String que modifica el Registro
 	 * @param frase
 	 * @return archivo que se escribio
 	 */
 	public String actualizarRegistro(String frase) {
+		return arch.escribirArchivo(frase);
+	}
+	/**
+	 * Metodo de tipo String que modifica el Registro
+	 * @param frase
+	 * @return archivo que se escribio
+	 */
+	public String actualizarRegistro2(String frase) {
 		return arch.escribirArchivo(frase);
 	}
 	/**

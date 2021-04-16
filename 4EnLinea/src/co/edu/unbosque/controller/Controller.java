@@ -445,8 +445,8 @@ public class Controller implements ActionListener {
 			ventana_bienvenido.setVisible(false);
 			quatriqui.setVisible(true);
 
-			String texto = registro.leerRegistro();
-			quatriqui.getPregistro().getArea_texto().setText(texto);
+//			String texto = registro.leerRegistro();
+//			quatriqui.getPregistro().getArea_texto().setText(texto);
 			Hilo();
 
 		}
@@ -622,7 +622,7 @@ public class Controller implements ActionListener {
 
 		if ((e.getActionCommand().equals("REMATCH"))) {
 			reiniciarTodo();
-			registro.actualizarRegistro(texto);
+		//	registro.actualizarRegistro(texto);
 			hilo.stop();
 			hr = 0;
 			min= 0;
@@ -634,7 +634,8 @@ public class Controller implements ActionListener {
 		}
 
 		if ((e.getActionCommand().equals("MENU"))) {
-
+			
+			
 			registro.actualizarRegistro(texto);
 			ventana_bienvenido.setVisible(true);
 			quatriqui.setVisible(false);
@@ -645,8 +646,17 @@ public class Controller implements ActionListener {
 			// VENTANA HISTORIAL
 		}
 		if ((e.getActionCommand().equals("HISTORIAL"))) {
+			
+			String texto2 = registro.leerRegistro2();
+//			texto2 = "Gano: "+ jugadores()+ " Perdio: "+ jugadores();
+			texto2 = ventana_historial.getPanel_historial().getArea_texto().getText();
 		
-			ventana_historial.getPanel_historial().getArea_texto().setText(texto);
+			ventana_historial.getPanel_historial().getArea_texto().setText(texto2+"\n" +"Gano: "+ jugadores()+ " Perdio: "+ jugadores());
+			
+			registro.actualizarRegistro2(texto2);
+			
+			
+			
 			
 			Hilo();
 			ventana_bienvenido.setVisible(false);
