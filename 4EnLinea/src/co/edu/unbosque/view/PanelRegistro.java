@@ -21,9 +21,9 @@ public class PanelRegistro extends JPanel {
 	private JLabel puntajeJ1;
 	private JLabel puntajeJ2;
 	private JLabel empates;
-	private List lPuntajeJ1;
-	private List lPuntajeJ2;
-	private List lEmpate;
+	private JTextArea lPuntajeJ1;
+	private JTextArea lPuntajeJ2;
+	private JTextArea lEmpate;
 	private JButton btrematch;
 	
 
@@ -44,6 +44,7 @@ public class PanelRegistro extends JPanel {
 		area_texto.setBounds(10, 10, 400, 600);
 		JScrollPane panel = new JScrollPane(area_texto);
 		panel.setBounds(2, 20, 360, 200);
+		area_texto.setEditable(false);
 		add(panel);
 		
 		lbjugador1 = new JLabel("Jugador 1:");
@@ -55,8 +56,9 @@ public class PanelRegistro extends JPanel {
 		puntajeJ1 = new JLabel("Puntaje: ");
 		puntajeJ1.setBounds(10,260,200,25);
 		add(puntajeJ1);
-		lPuntajeJ1= new List(); 
+		lPuntajeJ1= new JTextArea(); 
 		lPuntajeJ1.setBounds(10,290,60, 20);
+		lPuntajeJ1.setEditable(false);
 		add(lPuntajeJ1);
 		
 		nombjugador2 = new JLabel("Jugador 2:");
@@ -68,14 +70,14 @@ public class PanelRegistro extends JPanel {
 		puntajeJ2 = new JLabel("Puntaje: ");
 		puntajeJ2.setBounds(200,260,200,25);
 		add(puntajeJ2);
-		lPuntajeJ2= new List(); 
+		lPuntajeJ2= new JTextArea(); 
 		lPuntajeJ2.setBounds(200,290,60, 20);
 		add(lPuntajeJ2);
 		
 		empates = new JLabel("Empates: ");
 		empates.setBounds(100,300,200,25);
 		add(empates);
-		lEmpate= new List(); 
+		lEmpate= new JTextArea(); 
 		lEmpate.setBounds(100,330,60, 20);
 		add(lEmpate);
 		
@@ -106,23 +108,33 @@ public class PanelRegistro extends JPanel {
 	}
 
 
-	public List getlPuntajeJ1() {
+	public JTextArea getlPuntajeJ1() {
 		return lPuntajeJ1;
 	}
 
 
-	public void setlPuntajeJ1(List lPuntajeJ1) {
-		this.lPuntajeJ1 = lPuntajeJ1;
+	public void setlPuntajeJ1(JTextArea string) {
+		this.lPuntajeJ1 = string;
 	}
 
 
-	public List getlPuntajeJ2() {
+	public JTextArea getlPuntajeJ2() {
 		return lPuntajeJ2;
 	}
 
 
-	public void setlPuntajeJ2(List lPuntajeJ2) {
+	public void setlPuntajeJ2(JTextArea lPuntajeJ2) {
 		this.lPuntajeJ2 = lPuntajeJ2;
+	}
+
+
+	public JTextArea getlEmpate() {
+		return lEmpate;
+	}
+
+
+	public void setlEmpate(JTextArea lEmpate) {
+		this.lEmpate = lEmpate;
 	}
 
 	
