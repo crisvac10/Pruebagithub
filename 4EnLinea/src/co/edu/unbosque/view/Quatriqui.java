@@ -62,7 +62,7 @@ public class Quatriqui extends JFrame {
 	public void InterfazQuatriqui() {
 		
 		Cronometro = new JLabel("");
-		Cronometro.setBounds(150, 475, 100, 30);
+		Cronometro.setBounds(150, 475, 200, 30);
 		Cronometro.setFont(new Font("Tahoma", 1, 30));
 		Cronometro.setHorizontalAlignment(JLabel.CENTER);
 		Cronometro.setForeground(Color.black);

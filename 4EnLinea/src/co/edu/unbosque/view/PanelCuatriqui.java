@@ -8,13 +8,19 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
-
+/**
+ * Clase PanelCuatriqui que extiendede JPanel, contiene los JLabel y Botones para el juego 
+ * @author Jinetes del apocalipsis
+ *
+ */
 public class PanelCuatriqui extends JPanel{
 	
-	private JLabel lb1,lb2,lb3,lb4,lb5,lb6,lb7,lb8,lb9,lb10,lb11,lb12,lb13,lb14,lb15,lb16;
-	private JButton B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11,B12,B13,B14,B15,B16;
+	private JLabel lb1,lb2,lb3,lb4,lb5,lb6,lb7,lb8,lb9,lb10,lb11,lb12,lb13,lb14,lb15,lb16;//Atributos JLabel que contendran la jugada de los jugadores 
+	private JButton B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11,B12,B13,B14,B15,B16;// Atributos JButton que contiene los Botones para el juego
 	
-
+/**
+ * Constructor de la clase PanelCuatriqui que inicializa los atributos y metodos de el programa
+ */
 	public PanelCuatriqui() {
 		
 		setLayout(null);

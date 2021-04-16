@@ -7,7 +7,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
+/**
+ * Clase VentanaBienvenidos que contiene la interfaz de usuario principal
+ * @author Jinetes del apocalipsis
+ *
+ */
 public class VentanaBienvenido extends JFrame {
 	
 	private ImageIcon ImagenBienvenida;// imagen de fondo de la ventana Bienvenido
@@ -18,6 +22,9 @@ public class VentanaBienvenido extends JFrame {
 	private int ancho; // Atributo que contiene el ancho de la pantalla
 	private int alto;// Atributo que contiene el alto de la pantalla
 	
+	/**
+	 * Constructor de la clase VentanaBienvenido que inicializa los atributos y metodos de la ventana
+	 */
 	public VentanaBienvenido() {
 
 		setIconImage(new ImageIcon(getClass().getResource("/Imagen/logo.png")).getImage());
@@ -41,7 +48,9 @@ public class VentanaBienvenido extends JFrame {
 		setResizable(false);
 		setVisible(true);
 	}
-	
+	/**
+	 * Metodo Botones que contiene los botones principales de la ventana
+	 */
 	public void Botones() {
 
 		bt_Jugar = new JButton("Jugar");
@@ -66,19 +75,31 @@ public class VentanaBienvenido extends JFrame {
 		
 		
 	}
-
+/**
+ * metodo get que permite acceder al atributo Bt_Jugar
+ * @return bt_jugar
+ */
 	public JButton getBt_Jugar() {
 		return bt_Jugar;
 	}
-
+/**
+ * Metodo que permite modificar el atributo Bt_Jugar
+ * @param bt_Jugar
+ */
 	public void setBt_Jugar(JButton bt_Jugar) {
 		this.bt_Jugar = bt_Jugar;
 	}
-
+/**
+ * Metodo que permite acceder el atributo Bt_Historial
+ * @return bt_Historial
+ */
 	public JButton getBt_Historial() {
 		return bt_Historial;
 	}
-
+/**
+ * Metodo que permite modificar elatributo Bt_Historial
+ * @param bt_Historial
+ */
 	public void setBt_Historial(JButton bt_Historial) {
 		this.bt_Historial = bt_Historial;
 	}
